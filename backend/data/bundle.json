@@ -4,7 +4,7 @@
       "id": 1,
       "name": "Bundle 1",
       "description": "Description bundle 1",
-      "applicationIds": [1, 3]
+      "applicationIds": [1, 2, 3, 4]
     },
     {
       "id": 2,
