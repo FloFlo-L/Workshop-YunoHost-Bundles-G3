@@ -1,28 +1,26 @@
-{
-  "bundles": [
-    {
-      "id": 1,
-      "name": "Bundle 1",
-      "description": "Description bundle 1",
-      "applicationIds": [1, 2, 3, 4]
-    },
-    {
-      "id": 2,
-      "name": "Bundle 3",
-      "description": "Description bundle 2",
-      "applicationIds": []
-    },
-    {
-      "id": 4,
-      "name": "Bundle 4",
-      "description": "Description bundle 2",
-      "applicationIds": []
-    },
-    {
-      "id": 2,
-      "name": "Bundle 4",
-      "description": "Description bundle 4",
-      "applicationIds": []
-    }
-  ]
-}
+[
+  {
+    "id": 1,
+    "name": "Bundle 1",
+    "description": "Description bundle 1",
+    "applicationIds": [1, 2, 3, 4]
+  },
+  {
+    "id": 2,
+    "name": "Bundle 3",
+    "description": "Description bundle 2",
+    "applicationIds": []
+  },
+  {
+    "id": 4,
+    "name": "Bundle 4",
+    "description": "Description bundle 2",
+    "applicationIds": []
+  },
+  {
+    "id": 2,
+    "name": "Bundle 4",
+    "description": "Description bundle 4",
+    "applicationIds": []
+  }
+]
