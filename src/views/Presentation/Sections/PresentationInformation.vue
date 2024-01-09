@@ -13,20 +13,18 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
             <RotatingCardFront
               image="https://images.unsplash.com/photo-1569683795645-b62e50fbf103?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=987&q=80"
               icon="touch_app"
-              title="Feel the <br /> Material Kit"
-              description="All the Bootstrap components that you need in a development have been
-        re-design with the new look."
+              title="Les applications <br /> CHATONS"
+              description="Cette sélection d'applications couvre la gestion de site web, la collaboration en ligne, la bureautique, la traduction de texte, etc."
             />
 
             <RotatingCardBack
               image="https://images.unsplash.com/photo-1498889444388-e67ea62c464b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1365&q=80"
-              title="Discover More"
-              description="You will save a lot of time going from prototyping to full-functional
-                code because all elements are implemented."
+              title="BUNDLE CHATONS"
+              description="*****"
               :action="[
                 {
                   route: './/sections/page-sections/hero-sections.html',
-                  label: 'Start with Headers',
+                  label: 'Découvrir',
                 },
               ]"
             />
@@ -36,31 +34,27 @@ import DefaultInfoCard from "../../../examples/cards/infoCards/DefaultInfoCard.v
           <div class="row justify-content-start">
             <DefaultInfoCard
               icon="content_copy"
-              title="Full Documentation"
-              description="Built by developers for developers. Check the foundation and
-                  you will find everything inside our documentation."
+              title="Infrastructure Complète pour CHATONS"
+              description="Une solution tout-en-un pour répondre efficacement aux besoins variés des utilisateurs en matière de communication, collaboration et bureautique."
             />
             <DefaultInfoCard
               icon="flip_to_front"
-              title="Bootstrap 5 Ready"
-              description="The world’s most popular front-end open source toolkit,
-                  featuring Sass variables and mixins."
+              title="Applications Polyvalentes"
+              description="Découvrez notre suite d'applications complète, allant de la gestion de site web à la messagerie, répondant à tous vos besoins numériques."
             />
           </div>
           <div class="row justify-content-start mt-5">
             <DefaultInfoCard
               class="mt-3"
               icon="price_change"
-              title="Save Time & Money"
-              description="Creating your design from scratch with dedicated designers can
-                be very expensive. Start with our Design System."
+              title="Adaptabilité Personnalisée"
+              description="Profitez d'une adaptabilité intelligente à la puissance de la machine, au temps disponible et au public cible, offrant une expérience optimale selon vos besoins spécifiques."
             />
             <DefaultInfoCard
               class="mt-3"
               icon="devices"
-              title="Fully Responsive"
-              description="Regardless of the screen size, the website content will
-                  naturally fit the given resolution."
+              title="Documentation Complète"
+              description="Accédez à notre documentation exhaustive pour une utilisation optimale du bundle, comprenant des instructions détaillées et des conseils pratiques pour créer une infrastructure CHATONS robuste."
             />
           </div>
         </div>

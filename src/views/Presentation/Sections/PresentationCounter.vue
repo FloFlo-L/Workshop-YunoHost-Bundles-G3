@@ -23,9 +23,8 @@ import DefaultCounterCard from "../../../examples/cards/counterCards/DefaultCoun
             <div class="col-md-4 position-relative">
               <DefaultCounterCard
                 color="success"
-                title="Design Blocks"
-                description="Mix the sections, change the colors and unleash your
-                  creativity"
+                title="Monter un CHATONS"
+                description="infrastructure complète de services, combinant des outils de communication, de collaboration, et de bureautique pour répondre aux besoins variés des utilisateurs."
                 :count="15"
                 suffix="+"
                 :duration="3000"
