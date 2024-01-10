@@ -1,0 +1,8 @@
+[
+    {
+        "name": "nextcloud",
+        "admin": "florian",
+        "is_public": true,
+        "user_home": false
+    }
+]
