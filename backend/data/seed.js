@@ -42,7 +42,7 @@ const bundlesData = [
     },
     {
         id: 2,
-        name: 'Bundle 3',
+        name: 'Bundle 2',
         description: 'Description du Bundle 2',
         applicationIds: [],
     },
