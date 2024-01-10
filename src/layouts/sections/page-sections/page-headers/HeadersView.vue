@@ -36,6 +36,12 @@
   border-radius:20px;
   
 }
+.fixed-size-image{
+      width:  50%; /* Définir la largeur en pourcentage */
+      height: auto; /* Permet à la hauteur de s'ajuster proportionnellement à la largeur */
+      max-width: 400px; /* Limiter la largeur maximale pour éviter que l'image ne devienne trop grande sur de grands écrans */
+  
+}
 
 
 </style>
@@ -77,7 +83,7 @@ onMounted(() => {
                   <div class="col-md-4 mt-md-0">
                       <a href="/sections/page-sections/page-headers" class="">
                           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-                          <img class="w-100" src="../../../../assets/img/city-profile.jpg" alt="Page Headers" loading="lazy">
+                          <img class="fixed-size-image" src="../../../../assets/img/etherpad.jpg" alt="Page Headers" loading="lazy">
                           <!--v-if-->
                           </div>
                       </a>
@@ -96,7 +102,7 @@ onMounted(() => {
                   <div class="col-md-4 mt-md-0">
                       <a href="/sections/page-sections/page-headers" class="">
                           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-                          <img class="w-100" src="../../../../assets/img/city-profile.jpg" alt="Page Headers" loading="lazy">
+                          <img class="fixed-size-image" src="../../../../assets/img/nextcloud.jpg" alt="Page Headers" loading="lazy">
                           <!--v-if-->
                           </div>
                       </a>
@@ -115,7 +121,7 @@ onMounted(() => {
                   <div class="col-md-4 mt-md-0">
                       <a href="/sections/page-sections/page-headers" class="">
                           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-                          <img class="w-100" src="../../../../assets/img/city-profile.jpg" alt="Page Headers" loading="lazy">
+                          <img class="fixed-size-image" src="../../../../assets/img/Jitsi.jpg" alt="Page Headers" loading="lazy">
                           <!--v-if-->
                           </div>
                       </a>
@@ -134,7 +140,7 @@ onMounted(() => {
                   <div class="col-md-4 mt-md-0">
                       <a href="/sections/page-sections/page-headers" class="">
                           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-                          <img class="w-100" src="../../../../assets/img/city-profile.jpg" alt="Page Headers" loading="lazy">
+                          <img class="fixed-size-image" src="../../../../assets/img/roundcube.jpg" alt="Page Headers" loading="lazy">
                           <!--v-if-->
                           </div>
                       </a>
@@ -157,7 +163,7 @@ onMounted(() => {
         </div>
 
 
-        <button @click="handleButtonClick(index)" class="center-button">Cliquez-moi</button>
+        <button @click="handleButtonClick(index)" class="center-button">Instaler</button>
 
               </BaseLayout>
 
