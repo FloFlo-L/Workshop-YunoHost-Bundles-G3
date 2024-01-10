@@ -130,9 +130,9 @@ const dbOperations = {
   },
 
   // Insérer une nouvelle configuration d'application
-  insertAppConfiguration: (id, applicationId, configs, callback) => {
-    const query = 'INSERT INTO app_configurations (id, applicationId, configs) VALUES (?, ?, ?)';
-    db.run(query, [id, applicationId, JSON.stringify(configs)], (err) => {
+  insertAppConfiguration: (id, applicationId, name, configs, callback) => {
+    const query = 'INSERT INTO app_configurations (id, applicationId, name, configs) VALUES (?, ?, ?, ?)';
+    db.run(query, [id, applicationId, name, JSON.stringify(configs)], (err) => {
       if (err) {
         console.error(err);
         callback(err);

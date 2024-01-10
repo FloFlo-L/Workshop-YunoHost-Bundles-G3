@@ -76,7 +76,7 @@ const confguartionsData = [
     },
 ]
 confguartionsData.forEach(confguartion => {
-    dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.configs);
+    dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.name, confguartion.configs);
 });
 
 bundlesData.forEach(bundle => {

@@ -37,16 +37,7 @@ app.get('/api/applications', (req, res) => {
 
 // Fonction pour connecter l'application via YunoHost (ssh)
 const connect = () => {
-  const Client = require('ssh2').Client;
-
-  const conn = new Client();
-
-  // Informations de connexion SSH
-  const sshConfig = {
-    host: '163.172.136.65',
-    username: 'florian',
-    password: '1234Azer_',
-  };
+  
 };
 
 // Fonction pour installer des applications à partir d'une liste d'IDs
@@ -84,10 +75,9 @@ const installAppsByIds = async (appIds, res) => {
         .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
         .join('&');
       // Afficher la chaîne de requête
-      console.log(options);
 
+      // connexion + exec de la ligne de commande 
       const Client = require('ssh2').Client;
-
       const conn = new Client();
 
       // Informations de connexion SSH
@@ -98,11 +88,8 @@ const installAppsByIds = async (appIds, res) => {
       };
 
       conn.on('ready', () => {
-        console.log('Connected via SSH');
-
-        // Vous pouvez exécuter des commandes ici après être connecté
         conn.exec(
-          'echo 1234Azer_ | sudo -S yunohost app install baikal --args="domain=dcm1tlg3.nohost.me&path=/baikal&init_main_permission=visitors&password=1234Azer_"',
+          `echo ${sshConfig.password} | sudo -S yunohost app install ${configurations[0].name} --args='${options}'`,
           (err, stream) => {
             stream
               .on('close', (code, signal) => {
@@ -113,12 +100,11 @@ const installAppsByIds = async (appIds, res) => {
                 console.log(`Command output: ${data}`);
               })
               .stderr.on('data', (data) => {
-                console.error(`Command error: ${data}`);
+                console.error(`Command error: "${data}"`);
               });
           }
         );
       });
-
       conn.connect(sshConfig);
 
       // await connect(); // S'assurer que la connexion SSH est établie
