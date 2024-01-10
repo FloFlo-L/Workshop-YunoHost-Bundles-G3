@@ -33,11 +33,11 @@ defineProps({
   },
   col1: {
     type: String,
-    default: "col-lg-3",
+    default: "col-lg-1",
   },
   col2: {
     type: String,
-    default: "col-lg-9",
+    default: "col-lg-10",
   },
 });
 </script>
@@ -47,7 +47,7 @@ export default {
 };
 </script>
 <template>
-  <section class="my-5 py-5">
+  <section class="my-1 py-1">
     <div class="container">
       <div class="row">
         <div class="row justify-content-center text-center my-sm-5">
@@ -66,13 +66,13 @@ export default {
         </div>
       </div>
     </div>
-    <div class="container mt-sm-5 mt-3">
+    <div class="container mt-sm-1 mt-1">
       <div
         v-for="({ heading, description, items }, index) in data"
         :class="`row ${index != 0 && index != -1 ? 'pt-lg-6' : ''}`"
         :key="heading"
       >
-        <div :class="`${col1 ?? 'col-lg-3'}`">
+        <div :class="`${col1 ?? 'col-lg-1'}`">
           <div
             class="position-sticky pb-lg-5 pb-3 mt-lg-0 mt-5 ps-2"
             style="top: 100px"
@@ -83,7 +83,7 @@ export default {
             </h6>
           </div>
         </div>
-        <div :class="`${col2 ?? 'col-lg-9'}`">
+        <div :class="`${col2 ?? 'col-lg-10'}`">
           <div :class="`row ${index != 0 ? 'mt-3' : ''}`">
             <div
               class="col-md-4 mt-md-0"
