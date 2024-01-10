@@ -106,8 +106,8 @@ dbOperations.getAllApplications((err, applications) => {
 // Récupérer et afficher toutes les configurations
 dbOperations.getAppConfigurations((err, app_configurations) => {
     if (err) {
-        console.error('Erreur lors de la récupération des configurations :', err);
+        console.error('Erreur lors de la récupération des app_configurations :', err);
     } else {
-        console.log('Configurations récupérées avec succès :', app_configurations);
+        console.log('Applications récupérées avec succès :', app_configurations);
     }
 });

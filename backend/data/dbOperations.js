@@ -44,15 +44,15 @@ db.run(`
 // Opérations de base de données
 const dbOperations = {
   // Insérer un nouveau bundle
-  insertBundle: (name, description) => {
-    const query = `INSERT INTO bundles (name, description) VALUES (?, ?)`;
-    db.run(query, [name, description]);
+  insertBundle: (id, name, description) => {
+    const query = `INSERT INTO bundles (id, name, description) VALUES (?, ?,?)`;
+    db.run(query, [id, name, description]);
   },
 
   // Insérer une nouvelle application
-  insertApplication: (name, description, logo) => {
-    const query = `INSERT INTO applications (name, description, logo) VALUES (?, ?, ?)`;
-    db.run(query, [name, description, logo]);
+  insertApplication: (id, name, description, logo) => {
+    const query = `INSERT INTO applications (id,name, description, logo) VALUES (?, ?, ?, ?)`;
+    db.run(query, [id,name, description, logo]);
   },
 
   // Récupérer tous les bundles
@@ -101,9 +101,9 @@ const dbOperations = {
   },
 
   // Insérer une nouvelle configuration d'application
-  insertAppConfiguration: (applicationId, configs) => {
-    const query = `INSERT INTO app_configurations (applicationId, configs) VALUES (?, ?)`;
-    db.run(query, [applicationId, configs]);
+  insertAppConfiguration: (id,applicationId, configs) => {
+    const query = `INSERT INTO app_configurations (id,applicationId, configs) VALUES (?, ?,?)`;
+    db.run(query, [id,applicationId, configs]);
   },
 
   // Récupérer toutes les configurations d'une application
@@ -111,7 +111,7 @@ const dbOperations = {
     const query = 'SELECT * FROM app_configurations WHERE applicationId = ?';
     db.all(query, [applicationId], callback);
   },
-  
+
 };
 
 module.exports = dbOperations;
