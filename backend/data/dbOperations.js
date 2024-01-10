@@ -15,6 +15,7 @@ db.run(`
     id INTEGER PRIMARY KEY,
     name TEXT,
     description TEXT,
+    logo TEXT
   )
 `);
 
@@ -34,7 +35,7 @@ db.run(`
   CREATE TABLE IF NOT EXISTS app_configurations (
     id INTEGER PRIMARY KEY,
     applicationId INTEGER,
-    configs JSON
+    configs JSON,
     FOREIGN KEY (applicationId) REFERENCES applications(id)
   )
 `);
