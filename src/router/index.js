@@ -57,6 +57,11 @@ const router = createRouter({
       component: PageHeaders,
     },
     {
+      path: "/sections/page-sections/page-headers/pages-views",
+      name: "pages-views",
+      component: PageHeaders,
+    },
+    {
       path: "/sections/page-sections/features",
       name: "page-features",
       component: PageFeatures,
