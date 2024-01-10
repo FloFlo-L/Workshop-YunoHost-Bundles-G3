@@ -47,13 +47,13 @@ const bundlesData = [
         applicationIds: [],
     },
     {
-        id: 4,
-        name: 'Bundle 4',
-        description: 'Description du Bundle 2',
+        id: 3,
+        name: 'Bundle 3',
+        description: 'Description du Bundle 3',
         applicationIds: [],
     },
     {
-        id: 2,
+        id: 4,
         name: 'Bundle 4',
         description: 'Description du Bundle 4',
         applicationIds: [],
@@ -75,6 +75,9 @@ const confguartionsData = [
         }
     },
 ]
+confguartionsData.forEach(confguartion => {
+    dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.configs);
+});
 
 bundlesData.forEach(bundle => {
     dbOperations.insertBundle(bundle.id, bundle.name, bundle.description);

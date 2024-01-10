@@ -45,14 +45,14 @@ db.run(`
 const dbOperations = {
   // Insérer un nouveau bundle
   insertBundle: (id, name, description) => {
-    const query = `INSERT INTO bundles (id, name, description) VALUES (?, ?,?)`;
+    const query = `INSERT INTO bundles (id, name, description) VALUES (?, ?, ?)`;
     db.run(query, [id, name, description]);
   },
 
   // Insérer une nouvelle application
   insertApplication: (id, name, description, logo) => {
     const query = `INSERT INTO applications (id,name, description, logo) VALUES (?, ?, ?, ?)`;
-    db.run(query, [id,name, description, logo]);
+    db.run(query, [id, name, description, logo]);
   },
 
   // Récupérer tous les bundles
@@ -71,7 +71,14 @@ const dbOperations = {
   // Récupérer toutes les applications
   getAllApplications: (callback) => {
     const query = 'SELECT * FROM applications';
-    db.all(query, callback);
+    db.all(query, (err, rows) => {
+      if (err) {
+        console.error(err);
+        callback(err, null);
+      } else {
+        callback(null, rows);
+      }
+    });
   },
 
   // Insérer des applications liées à un bundle
@@ -85,31 +92,66 @@ const dbOperations = {
   // Récupérer les applications liées à un bundle
   getApplicationsForBundle: (bundleId, callback) => {
     const query = 'SELECT applications.* FROM applications JOIN bundle_applications ON applications.id = bundle_applications.applicationId WHERE bundle_applications.bundleId = ?';
-    db.all(query, [bundleId], callback);
+    db.all(query, (err, [bundleId], rows) => {
+      if (err) {
+        console.error(err);
+        callback(err, [bundleId], null);
+      } else {
+        callback(null, [bundleId], rows);
+      }
+    });
   },
 
   // Récupérer les bundles liés à une application
   getBundlesForApplication: (applicationId, callback) => {
     const query = 'SELECT bundles.* FROM bundles JOIN bundle_applications ON bundles.id = bundle_applications.bundleId WHERE bundle_applications.applicationId = ?';
-    db.all(query, [applicationId], callback);
+    db.all(query, (err, [applicationId], rows) => {
+      if (err) {
+        console.error(err);
+        callback(err, [applicationId], null);
+      } else {
+        callback(null, [applicationId], rows);
+      }
+    });
   },
 
   // Récupérer une application par son ID
   getApplicationById: (applicationId, callback) => {
     const query = 'SELECT * FROM applications WHERE id = ?';
-    db.get(query, [applicationId], callback);
+    db.get(query, [applicationId], (err, row) => {
+      if (err) {
+        console.error(err);
+        callback(err, null);  // Pas besoin de transmettre applicationId ici
+      } else {
+        callback(null, row);
+      }
+    });
   },
 
   // Insérer une nouvelle configuration d'application
-  insertAppConfiguration: (id,applicationId, configs) => {
-    const query = `INSERT INTO app_configurations (id,applicationId, configs) VALUES (?, ?,?)`;
-    db.run(query, [id,applicationId, configs]);
+  insertAppConfiguration: (id, applicationId, configs, callback) => {
+    const query = 'INSERT INTO app_configurations (id, applicationId, configs) VALUES (?, ?, ?)';
+    db.run(query, [id, applicationId, JSON.stringify(configs)], (err) => {
+      if (err) {
+        console.error(err);
+        callback(err);
+      } else {
+        callback(null);
+      }
+    });
   },
 
   // Récupérer toutes les configurations d'une application
   getAppConfigurations: (applicationId, callback) => {
     const query = 'SELECT * FROM app_configurations WHERE applicationId = ?';
-    db.all(query, [applicationId], callback);
+    db.all(query, [applicationId], (err, rows) => {
+      if (err) {
+        console.error(err);
+        callback(err, null);
+      } else {
+        callback(null, rows);
+      }
+    });
   },
 
 };
