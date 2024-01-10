@@ -36,6 +36,7 @@ const router = createRouter({
       name: "about",
       component: AboutView,
     },
+   
     {
       path: "/pages/landing-pages/contact-us",
       name: "contactus",
@@ -54,11 +55,6 @@ const router = createRouter({
     {
       path: "/sections/page-sections/page-headers",
       name: "page-headers",
-      component: PageHeaders,
-    },
-    {
-      path: "/sections/page-sections/page-headers/pages-views",
-      name: "pages-views",
       component: PageHeaders,
     },
     {
