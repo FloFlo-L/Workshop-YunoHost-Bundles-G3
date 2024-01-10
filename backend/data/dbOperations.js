@@ -35,6 +35,7 @@ db.run(`
   CREATE TABLE IF NOT EXISTS app_configurations (
     id INTEGER PRIMARY KEY,
     applicationId INTEGER,
+    name TEXT,
     configs JSON,
     FOREIGN KEY (applicationId) REFERENCES applications(id)
   )

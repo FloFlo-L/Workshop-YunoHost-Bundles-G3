@@ -65,9 +65,9 @@ const confguartionsData = [
     {
         id: 1,
         applicationId: 1,
+        name: "nextcloud",
         configs: {
             "domain": "dcm1tlg3.nohost.me",
-            "name": "nextcloud",
             "path": "/nextcloud",
             "admin": "florian",
             "is_public": true,
