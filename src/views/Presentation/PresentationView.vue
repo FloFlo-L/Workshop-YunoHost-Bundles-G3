@@ -56,7 +56,7 @@ onUnmounted(() => {
               BUNDLE
             </h1>
             <p class="lead text-white px-5 mt-3" :style="{ fontWeight: '500' }">
-              Interface Web pour Bundles d'Applications Yunohost;
+              Interface Web pour Bundles d'Applications Yunohost.
             </p>
           </div>
         </div>
