@@ -53,8 +53,6 @@ const connect = () => {
 const installAppsByIds = async (appIds, res) => {
     try {
         for (const appId of appIds) {
-            // let app = null;
-
             // Récuperation des données de l'app by id
             const application = await new Promise((resolve) => {
                 dbOperations.getApplicationById(appId, (err, application) => {
@@ -65,9 +63,6 @@ const installAppsByIds = async (appIds, res) => {
                     }
                 });
             });
-
-            console.log("app")
-            console.log(application)
 
             // Récuperation des données de la config by id
             const configurations = await new Promise((resolve) => {
@@ -80,17 +75,14 @@ const installAppsByIds = async (appIds, res) => {
                 });
             });
 
-            console.log("configuration")
-            console.log(configurations)
-
-
             // Construire les options à partir des configurations
-            let options = configurations[0].configs;
-            console.log(options)
-            // `domain=${app.domain}&path=${app.path}&init_main_permission=${app.init_main_permission}&password=${app.password}`;
-            // configurations.forEach(config => {
-            //     options += `&${config}`;
-            // });
+            const configObj = JSON.parse(configurations[0].configs);
+            // Créer un tableau de paires clé-valeur
+            const keyValuePairs = Object.entries(configObj);
+            // Mapper chaque paire clé-valeur pour créer la chaîne de requête
+            const options = keyValuePairs.map(([key, value]) => `${key}=${encodeURIComponent(value)}`).join('&');
+            // Afficher la chaîne de requête
+            console.log(options);
 
             // await connect(); // S'assurer que la connexion SSH est établie
             // return new Promise((resolve, reject) => {
