@@ -5,6 +5,7 @@
     "descrition": "Nextcloud Hub est la plate-forme de collaboration de contenu sur site entièrement open source. Les équipes accèdent, partagent et modifient leurs documents, discutent et participent à des appels vidéo et gèrent leur courrier, leur calendrier et leurs projets sur des interfaces mobiles, de bureau et Web.",
     "logo": "https://github.com/YunoHost/apps/blob/master/logos/nextcloud.png",
     "install_config": {
+      "domain": "dcm1tlg3.nohost.me",
       "name": "nextcloud",
       "path": "/nextcloud",
       "admin": "florian",
@@ -14,7 +15,7 @@
   },
   {
     "id": 2,
-    "name": "Etherpad ",
+    "name": "Etherpad",
     "descrition": "Etherpad est un éditeur collaboratif en temps réel évolutif pour des milliers d'utilisateurs simultanés en temps réel. Il fournit des capacités complètes d'exportation de données et s'exécute sur votre serveur, sous votre contrôle.",
     "logo": "https://github.com/YunoHost/apps/blob/master/logos/etherpad.png"
   },
@@ -22,12 +23,22 @@
     "id": 3,
     "name": "Jitsi",
     "descrition": "Jitsi Meet est un logiciel libre (Apache) dont Jitsi Videobridge, avec WebRTC Javascript, propose des vidéos-conférences de haute qualité, sécurisées et évolutives.",
-    "logo": "https://github.com/YunoHost/apps/blob/master/logos/jitsi.png"
+    "logo": "https://github.com/YunoHost/apps/blob/master/logos/jitsi.png",
+    "install_config": {
+      "name": "jitsi",
+      "newdomain": "jitsi.dcm1tlg3.nohost.me"
+    }
   },
   {
     "id": 4,
     "name": "Roundcube",
     "descrition": "Roundcube est un client IMAP multilingue basé sur un navigateur avec une interface utilisateur semblable à une application.",
-    "logo": "https://github.com/YunoHost/apps/blob/master/logos/roundcube.png"
+    "logo": "https://github.com/YunoHost/apps/blob/master/logos/roundcube.png",
+    "install_config": {
+      "name": "roundcube",
+      "path": "/webmail",
+      "language": "fr_FR",
+      "with_carddav": "no"
+    }
   }
 ]

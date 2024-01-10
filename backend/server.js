@@ -1,5 +1,5 @@
 const express = require('express');
-const { exec } = require('child_process');
+const { exec, spawn } = require('child_process');
 const app = express();
 const port = 3000;
 
@@ -16,6 +16,8 @@ app.listen(port, () => {
 // CODE POUR LA GESTION DES DONNÉES JSON
 const bundles = require('./data/bundles.json');
 const applications = require('./data/applications.json');
+const { error } = require('console');
+const { stdout, stderr } = require('process');
 
 // API pour obtenir la liste des bundles
 app.get('/api/bundles', (req, res) => {
@@ -63,15 +65,10 @@ app.get('/api/install/config/:appId', (req, res) => {
   }
 });
 
-// Informations de connexion
-const adminUsername = 'florian';
-const serverIpAddress = '163.172.136.65';
-const adminPassword = '1234Azer_';
-
 // API pour installer une application
 app.post('/api/install/', async (req, res) => {
   const { appId } = req.body;
-  const prompt = await promptInstall(appId);
+  const prompt = await getArgs(appId);
 
   if (prompt) {
     installApp(prompt, res);
@@ -80,21 +77,18 @@ app.post('/api/install/', async (req, res) => {
   }
 });
 
-
 // retroune une chaine de caratcère pour les argument de l'installation de l'application
-const promptInstall = async (appId) => {
+const getArgs = async (appId) => {
   try {
-    const response = await axios.get(`http://localhost:3000/api/install/config/${appId}`);
+    const response = await axios.get(
+      `http://localhost:3000/api/install/config/${appId}`
+    );
     const configData = response.data;
-    const queryString = Object.keys(configData)
-    .filter(key => key !== 'name') // Exclude 'name' parameter
-    .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(configData[key])}`)
-    .join('&');
+    const argsString = Object.keys(configData)
+      .filter((key) => key !== 'name')
+      .map((key) => `${encodeURIComponent(key)}=${encodeURIComponent(configData[key])}`).join('&');
 
-  const args = `--args="${queryString}"`;
-
-  const promptInstall = `ssh florian@163.172.136.6 | sudo -S yunohost app install ${configData.name} ${args}`;
-  return promptInstall
+    return argsString;
   } catch (error) {
     return null;
   }
@@ -104,17 +98,35 @@ const promptInstall = async (appId) => {
 const installApp = (promptInstall, res) => {
   res.status(200).json({ message: promptInstall });
 
-  // on a récupérer la commande maintenant il faudra l'executer (voir suite du code (à tester))
+  // const Client = require('ssh2').Client;
 
-  exec(promptInstall, (error, stdout, stderr) => {
-      if (error) {
-        console.error(`Erreur lors de l'installation: ${error.message}`);
-        return res.status(500).json({ error: `Failed to install`, details: error.message });
-      }
+  // const conn = new Client();
 
-      console.log(`stdout: ${stdout}`);
-      console.error(`stderr: ${stderr}`);
+  // // Informations de connexion SSH
+  // const sshConfig = {
+  //   host: '163.172.136.65',
+  //   username: 'florian',
+  //   password: '1234Azer_',
+  // };
 
-      res.json({ message: `Installed ${appName}` });
-  });
+  // conn.on('ready', () => {
+  //   console.log('Connected via SSH');
+
+  //   // Vous pouvez exécuter des commandes ici après être connecté
+  //   conn.exec('echo 1234Azer_ | sudo -S yunohost app install baikal --args="domain=dcm1tlg3.nohost.me&path=/baikal&init_main_permission=visitors&password=1234Azer_"', (err, stream) => {
+  //     stream
+  //       .on('close', (code, signal) => {
+  //         console.log(`SSH command exited with code ${code}`);
+  //         conn.end();
+  //       })
+  //       .on('data', (data) => {
+  //         console.log(`Command output: ${data}`);
+  //       })
+  //       .stderr.on('data', (data) => {
+  //         console.error(`Command error: ${data}`);
+  //       });
+  //   });
+  // });
+
+  // conn.connect(sshConfig);
 };
