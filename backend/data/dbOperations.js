@@ -45,7 +45,7 @@ db.run(`
 const dbOperations = {
   // Insérer un nouveau bundle
   insertBundle: (id, name, description) => {
-    const query = `INSERT INTO bundles (id, name, description) VALUES (?, ?,?)`;
+    const query = `INSERT INTO bundles (id, name, description) VALUES (?, ?, ?)`;
     db.run(query, [id, name, description]);
   },
 
@@ -101,8 +101,8 @@ const dbOperations = {
   },
 
   // Insérer une nouvelle configuration d'application
-  insertAppConfiguration: (id,applicationId, configs) => {
-    const query = `INSERT INTO app_configurations (id,applicationId, configs) VALUES (?, ?,?)`;
+  insertAppConfiguration: (id, applicationId, configs) => {
+    const query = `INSERT INTO app_configurations (id, applicationId, configs) VALUES (?, ?, ?)`;
     db.run(query, [id,applicationId, configs]);
   },
 

@@ -42,18 +42,18 @@ const bundlesData = [
     },
     {
         id: 2,
-        name: 'Bundle 3',
+        name: 'Bundle 2',
         description: 'Description du Bundle 2',
+        applicationIds: [],
+    },
+    {
+        id: 3,
+        name: 'Bundle 3',
+        description: 'Description du Bundle 3',
         applicationIds: [],
     },
     {
         id: 4,
-        name: 'Bundle 4',
-        description: 'Description du Bundle 2',
-        applicationIds: [],
-    },
-    {
-        id: 2,
         name: 'Bundle 4',
         description: 'Description du Bundle 4',
         applicationIds: [],
