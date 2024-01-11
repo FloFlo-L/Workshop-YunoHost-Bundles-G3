@@ -32,7 +32,22 @@ const router = createRouter({
       component: PresentationView,
     },
     {
+<<<<<<< HEAD
       path: "/pages/landing-pages/author",
+=======
+      path: "/pages/landing-pages/about-us",
+      name: "about",
+      component: AboutView,
+    },
+
+    {
+      path: "/pages/landing-pages/contact-us",
+      name: "contactus",
+      component: ContactView,
+    },
+    {
+      path: "/sections/page-sections/page-headers/author",
+>>>>>>> origin/Zohra
       name: "author",
       component: AuthorView,
     },

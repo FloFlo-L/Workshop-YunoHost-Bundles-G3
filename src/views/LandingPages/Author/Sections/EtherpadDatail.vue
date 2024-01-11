@@ -6,7 +6,7 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // image
-import profilePic from "@/assets/img/bruce-mars.jpg";
+import profilePic from "@/assets/img/etherpad.png";
 
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
@@ -36,39 +36,37 @@ onMounted(() => {
               <div
                 class="d-flex justify-content-between align-items-center mb-2"
               >
-                <h3 class="mb-0">Michael Roven</h3>
+                <h3 class="mb-0">Etherpad</h3>
                 <div class="d-block">
                   <MaterialButton
                     class="text-nowrap mb-0"
                     variant="outline"
                     color="success"
                     size="sm"
-                    >Follow</MaterialButton
+                    >VOIR</MaterialButton
                   >
                 </div>
               </div>
-              <div class="row mb-4">
-                <div class="col-auto">
-                  <span class="h6 me-1">323</span>
-                  <span>Posts</span>
-                </div>
-                <div class="col-auto">
-                  <span class="h6 me-1">3.5k</span>
-                  <span>Followers</span>
-                </div>
-                <div class="col-auto">
-                  <span class="h6 me-1">260</span>
-                  <span>Following</span>
-                </div>
-              </div>
               <p class="text-lg mb-0">
-                Decisions: If you can’t decide, the answer is no. If two equally
-                difficult paths, choose the one more painful in the short term
-                (pain avoidance is creating an illusion of equality). Choose the
-                path that leaves you more equanimous.
-                <br /><a
-                  href="javascript:;"
-                  class="text-success icon-move-right"
+                Version Actuelle: 1.9.6~ynh1
+                <br /><br />
+                Alternative Potentielle à: Google Docs, G Suite, Microsoft Word,
+                Microsoft Office, Office 365
+                <br /><br />
+                Etherpad est un éditeur collaboratif en temps réel extensible à
+                des milliers d'utilisateurs simultanés en temps réel. Il offre
+                des capacités complètes d'exportation de données et fonctionne
+                sur votre serveur, sous votre contrôle. Cette version d'Etherpad
+                est installée sans plugins et utilise Redis comme base de
+                données.
+                <br /><br />
+                Note: La sauvegarde et la restauration de la base de données
+                Redis ne sont pas entièrement mises en œuvre.
+                <br /><br />
+                Si vous souhaitez installer Etherpad avec des plugins et une
+                base de données MySQL, consultez :
+                https://github.com/YunoHost-Apps/etherpad_mypads_ynh
+                <a href="javascript:;" class="text-success icon-move-right"
                   >More about me
                   <i class="fas fa-arrow-right text-sm ms-1"></i>
                 </a>
