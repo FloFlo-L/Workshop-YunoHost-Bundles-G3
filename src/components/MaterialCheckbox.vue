@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   id: {
     type: String,
@@ -36,4 +36,4 @@ defineProps({
       <slot />
     </label>
   </div>
-</template>
+</template> -->
