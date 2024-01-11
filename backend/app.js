@@ -29,20 +29,6 @@ app.get('/api/applications', (req, res) => {
     }
   });
 });
-// Endpoint pour obtenir un bundle
-app.get('/api/:bundle', (req, res) => {
-  // Utilisez req.params.bundle pour obtenir la valeur du paramètre :bundle
-  const bundleId = req.params.bundle;
-
-  dbOperations.getBundleById(bundleId, (err, bundle) => {
-    if (err) {
-      res.status(500).json({ error: 'Internal Server Error' });
-    } else {
-      res.json(bundle);
-    }
-  });
-});
-
 
 // Fonction pour installer des applications à partir d'une liste d'IDs
 const installAppsByIds = async (appIds, res) => {
@@ -92,13 +78,38 @@ const installAppsByIds = async (appIds, res) => {
       const sshConfig = {
         host: '163.172.136.65',
         username: 'florian',
-        password: '1234Azer_',
+        password: 'Flo1234Azer_',
       };
 
       conn.on('ready', () => {
+        if (configObj['new domain'] !== undefined) {
+          const newDomain = configObj['new domain'];
+
+          // Exécuter la commande SSH pour ajouter le nouveau domaine
+          conn.exec(
+            `echo ${sshConfig.password} | sudo -S yunohost domain add ${newDomain}`,
+            (err, stream) => {
+              stream
+                .on('close', (code, signal) => {
+                  console.log(`SSH command exited with code ${code}`);
+                })
+                .on('data', (data) => {
+                  console.log(`Command output: ${data}`);
+                })
+                .stderr.on('data', (data) => {
+                  const errorMessage = `Error adding domain "${newDomain}": "${data}"`;
+                  console.error(errorMessage);
+                  installErrors.push(errorMessage);
+                });
+            }
+          );
+        }
+
         conn.exec(
           `echo ${sshConfig.password} | sudo -S yunohost app install ${configurations[0].name} --args='${options}'`,
           (err, stream) => {
+            // ... (rest of your code)
+
             stream
               .on('close', (code, signal) => {
                 console.log(`SSH command exited with code ${code}`);

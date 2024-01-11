@@ -100,8 +100,14 @@ const confguartionsData = [
             "password": "1234Azer_"
         }
     },
-
-
+    {
+        id: 4,
+        applicationId: 3,
+        name: "jitsi",
+        configs: {
+            "newdomain": "jitsi.dcm1tlg3.nohost.me"
+        }
+    }
 ]
 confguartionsData.forEach(confguartion => {
     dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.name, confguartion.configs);
