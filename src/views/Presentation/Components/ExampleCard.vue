@@ -72,7 +72,7 @@ export default {
           fill="none"
           fill-rule="evenodd"
         >
-          <circle id="Oval" fill="#1F2937" cx="12" cy="12" r="12"></circle>
+          <circle id="Oval" fill="#515cff" cx="12" cy="12" r="12"></circle>
           <g
             id="padlock"
             transform="translate(7.000000, 5.000000)"
