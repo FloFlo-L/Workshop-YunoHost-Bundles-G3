@@ -44,6 +44,7 @@ const router = createRouter({
     // },
     {
       path: "/sections/page-sections/page-headers/author",
+
       name: "author",
       component: AuthorView,
     },
