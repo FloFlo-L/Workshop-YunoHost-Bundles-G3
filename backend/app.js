@@ -43,6 +43,19 @@ app.get('/api/:bundle', (req, res) => {
   });
 });
 
+// Endpoint pour obtenir les applications liées à un bundle
+app.get('/api/bundle/:bundleId/applications', (req, res) => {
+  const bundleId = req.params.bundleId;
+
+  dbOperations.getApplicationsForBundle(bundleId, (err, applications) => {
+    if (err) {
+      res.status(500).json({ error: 'Internal Server Error' });
+    } else {
+      res.json({ bundleId, applications });
+    }
+  });
+});
+
 
 // Fonction pour installer des applications à partir d'une liste d'IDs
 const installAppsByIds = async (appIds, res) => {
