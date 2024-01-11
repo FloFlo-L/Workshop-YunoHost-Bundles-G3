@@ -205,21 +205,15 @@ onMounted(() => {
                   </div>
         </div>
 
-                <!-- Button  modal -->
-                <div style="text-align: center; margin-top: 40px;">
-                  <MaterialButton
-                      variant="gradient"
-                      color="success"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      class="center-button">
-                      Instaler
-                  </MaterialButton>
-                </div>  
-        
-
-              </BaseLayout>
-
+    <button
+      @click="handleButtonClick(index)"
+      class="center-button"
+      data-bs-toggle="modal"
+      data-bs-target="#exampleModal"
+    >
+      Installer
+    </button>
+  </BaseLayout>
 
               <!-- Modal -->
         <div

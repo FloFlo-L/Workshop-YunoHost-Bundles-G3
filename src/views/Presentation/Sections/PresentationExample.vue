@@ -1,6 +1,5 @@
 <script setup>
 import ExampleCard from "../Components/ExampleCard.vue";
-import MaterialBadge from "../../../components/MaterialBadge.vue";
 import { ref } from "vue";
 const githubLink = ref(
   "https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3"
@@ -57,9 +56,7 @@ export default {
       <div class="row">
         <div class="row justify-content-center text-center my-sm-5">
           <div class="col-lg-6">
-            <MaterialBadge color="success" class="mb-3"
-              >Large Selection</MaterialBadge
-            >
+            
 
             <h2 class="text-dark mb-0">BUNDLES</h2>
             <p class="lead">
