@@ -72,7 +72,7 @@ const installAppsByIds = async (appIds, res) => {
 
       // connexion + exec de la ligne de commande 
       const Client = require('ssh2').Client;
-      const conn = new Client();
+      const conn = new Client({ readyTimeout: 60000 });
 
       // Informations de connexion SSH
       const sshConfig = {
