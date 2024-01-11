@@ -28,12 +28,8 @@
   display: block;
   margin: 0 auto;
   width: 25%;
-  background-color: #04AA6D;
-  color: white;
-  border: 10px solid #04AA6D;
-   /* float: left; */
-  margin-top:  40px;
-  border-radius:20px;
+  
+
   
 }
 .fixed-size-image{
@@ -62,6 +58,13 @@ import { header1Code } from "./components/codes";
 
 // nav-pills
 import setNavPills from "@/assets/js/nav-pills.js";
+
+//Vue Material Kit 2 components
+import MaterialButton from "@/components/MaterialButton.vue";
+
+//Vue Material Kit 2 components
+import MaterialProgress from "@/components/MaterialProgress.vue";
+
 
 // hook
 onMounted(() => {
@@ -157,16 +160,20 @@ onMounted(() => {
                         </div>
                       </div>
                   </div>
-
-
-
-
-
         </div>
 
-
-        <button @click="handleButtonClick(index)" class="center-button" data-bs-toggle="modal"
-          data-bs-target="#exampleModal">Instaler</button>
+                <!-- Button  modal -->
+                <div style="text-align: center; margin-top: 40px;">
+                  <MaterialButton
+                      variant="gradient"
+                      color="success"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal"
+                      class="center-button">
+                      Instaler
+                  </MaterialButton>
+                </div>  
+        
 
               </BaseLayout>
 
@@ -202,6 +209,23 @@ onMounted(() => {
                 shouldn’t like pink because that’s for girls, or you’d instantly
                 become a gay two-year-old.
               </div>
+
+                 <section class="py-6 mt-4">
+                  <div id="app">
+                    <div class="container">
+                      <div style="text-align: center;"> {{ percent }} %</div>
+                    <div class="row justify-space-between py-2">
+                      <div class="col-lg-6 mx-auto">
+                        <MaterialProgress  class="mb-3" color="secondary" :style="{'width' : percentage + '%'}" />
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </section>
+
+                
+
+
               <div class="modal-footer justify-content-between">
                 <MaterialButton
                   variant="gradient"
@@ -217,4 +241,33 @@ onMounted(() => {
           </div>
         </div>
 
+
+       
+
 </template>
+
+<script>
+export default {
+  name: 'app',
+  data() {
+    return {
+      percentage: 0
+    }
+  },
+  created () {
+    let interval = setInterval(()=> {
+      if (this.percentage < 100)
+        this.percentage += .1
+      else
+        clearInterval(interval)
+      
+    },)
+  },
+  computed: {
+    percent(){
+    return this.percentage.toFixed();
+  }
+}
+}
+
+</script>
