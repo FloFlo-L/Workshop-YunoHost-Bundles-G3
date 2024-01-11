@@ -6,10 +6,10 @@ import BaseLayout from "../../components/BaseLayout.vue";
 import View from "../../components/View.vue";
 
 // Forms page components
-import FormSimple from "./components/FormSimple.vue";
+// import FormSimple from "./components/FormSimple.vue";
 
 // Forms page components codes
-import { formSimpleCode } from "./components/codes";
+// import { formSimpleCode } from "./components/codes";
 
 //nav-pills
 import setNavPills from "@/assets/js/nav-pills";

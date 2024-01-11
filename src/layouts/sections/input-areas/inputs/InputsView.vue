@@ -12,7 +12,7 @@ import inputOutlined from "./components/InputOutlined.vue";
 import InputIcon from "./components/InputIcon.vue";
 import InputSuccess from "./components/InputSuccess.vue";
 import InputError from "./components/InputError.vue";
-import InputDisabled from "./components/InputDisabled.vue";
+// import InputDisabled from "./components/InputDisabled.vue";
 
 // Inputs page components codes
 import {
@@ -22,7 +22,7 @@ import {
   inputSuccessCode,
   inputIconCode,
   inputErrorCode,
-  inputDisabledCode,
+  // inputDisabledCode,
 } from "./components/codes";
 
 //nav-pills & material-input
@@ -64,8 +64,8 @@ onMounted(() => {
       <InputError />
     </View>
 
-    <View title="Input disabled" :code="inputDisabledCode" id="input-disabled">
+    <!-- <View title="Input disabled" :code="inputDisabledCode" id="input-disabled">
       <InputDisabled />
-    </View>
+    </View> -->
   </BaseLayout>
 </template>

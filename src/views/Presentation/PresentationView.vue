@@ -9,13 +9,12 @@ import Header from "../../examples/Header.vue";
 //Vue Material Kit 2 components
 
 // sections
-import PresentationCounter from "./Sections/PresentationCounter.vue";
-import PresentationPages from "./Sections/PresentationPages.vue";
+// import PresentationCounter from "./Sections/PresentationCounter.vue";
+// import PresentationPages from "./Sections/PresentationPages.vue";
 import PresentationExample from "./Sections/PresentationExample.vue";
 import data from "./Sections/Data/designBlocksData";
-import BuiltByDevelopers from "./Components/BuiltByDevelopers.vue";
-import PresentationTestimonials from "./Sections/PresentationTestimonials.vue";
-import PresentationInformation from "./Sections/PresentationInformation.vue";
+
+// import PresentationInformation from "./Sections/PresentationInformation.vue";
 
 //images
 import vueMkHeader from "@/assets/img/vue-mk-header.jpg";
@@ -65,13 +64,11 @@ onUnmounted(() => {
   </Header>
 
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6">
-    <PresentationCounter />
-    <PresentationInformation />
+    <!-- <PresentationCounter /> -->
+    <!-- <PresentationInformation /> -->
     <PresentationExample :data="data" />
-    <PresentationPages />
-    <BuiltByDevelopers />
-
-    <PresentationTestimonials />
+    <!-- <PresentationPages /> -->
+ 
 
     <div class="py-5"></div>
   </div>

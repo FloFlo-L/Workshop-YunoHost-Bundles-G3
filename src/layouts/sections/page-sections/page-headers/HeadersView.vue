@@ -218,7 +218,7 @@ onMounted(() => {
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
-      Instaler
+      Installer
     </button>
   </BaseLayout>
 

@@ -52,7 +52,7 @@ onMounted(() => {
                 <br /><br />
                 Alternative Potentielle à: Google Docs, G Suite, Microsoft Word,
                 Microsoft Office, Office 365
-                <br /><br />
+                <br /><br />  
                 Etherpad est un éditeur collaboratif en temps réel extensible à
                 des milliers d'utilisateurs simultanés en temps réel. Il offre
                 des capacités complètes d'exportation de données et fonctionne
