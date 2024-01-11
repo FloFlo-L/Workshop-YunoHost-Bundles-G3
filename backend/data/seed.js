@@ -74,6 +74,34 @@ const confguartionsData = [
             "user_home": false
         }
     },
+    {
+        id: 2,
+        applicationId: 4,
+        name: "roundcube",
+        configs: {
+            "domain": "dcm1tlg3.nohost.me",
+            "name": "roundcube",
+            "path": "/webmail",
+            "language": "fr_FR",
+            "with_carddav": "no"
+        }
+    },
+    {
+        id: 3,
+        applicationId: 2,
+        name: "etherpad",
+        configs: {
+            "domain": "dcm1tlg3.nohost.me",
+            "path": "/etherpad",
+            "init_main_permission": "visitors",
+            "export": "none",
+            "language": "fr",
+            "admin": "florian",
+            "password": "1234Azer_"
+        }
+    },
+
+
 ]
 confguartionsData.forEach(confguartion => {
     dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.name, confguartion.configs);
