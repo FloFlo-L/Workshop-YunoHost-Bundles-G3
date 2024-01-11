@@ -45,9 +45,9 @@ db.run(`
 // Opérations de base de données
 const dbOperations = {
   // Insérer un nouveau bundle
-  insertBundle: (id, name, description) => {
-    const query = `INSERT INTO bundles (id, name, description) VALUES (?, ?, ?)`;
-    db.run(query, [id, name, description]);
+  insertBundle: (id, name, description, applicationIds) => {
+    const query = `INSERT INTO bundles (id, name, description, applicationIds) VALUES (?, ?, ?,?)`;
+    db.run(query, [id, name, description, applicationIds]);
   },
 
   // Insérer une nouvelle application
@@ -89,7 +89,18 @@ const dbOperations = {
       db.run(query, [bundleId, applicationId]);
     }
   },
-
+ // Récupérer une application par son ID
+ getBundleById: (bundleId, callback) => {
+  const query = 'SELECT * FROM bundles WHERE id = ?';
+  db.get(query, [bundleId], (err, row) => {
+    if (err) {
+      console.error(err);
+      callback(err, null);  // Pas besoin de transmettre applicationId ici
+    } else {
+      callback(null, row);
+    }
+  });
+},
   // Récupérer les applications liées à un bundle
   getApplicationsForBundle: (bundleId, callback) => {
     const query = 'SELECT applications.* FROM applications JOIN bundle_applications ON applications.id = bundle_applications.applicationId WHERE bundle_applications.bundleId = ?';
