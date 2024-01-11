@@ -101,6 +101,8 @@ const installAppsByIds = async (appIds, res) => {
         .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
         .join('&'); // Afficher la chaîne de requête
 
+
+
       // connexion + exec de la ligne de commande 
       const Client = require('ssh2').Client;
       const conn = new Client({ readyTimeout: 60000 });
@@ -113,12 +115,12 @@ const installAppsByIds = async (appIds, res) => {
       };
 
       conn.on('ready', () => {
-        if (configObj['new domain'] !== undefined) {
-          const newDomain = configObj['new domain'];
+        // Vérifier si l'application a la propriété newdomain à true dans sa configuration
 
-          // Exécuter la commande SSH pour ajouter le nouveau domaine
+        if (configurations[0].newdomain !== undefined) {
+          console.log("entrééééé")
           conn.exec(
-            `echo ${sshConfig.password} | sudo -S yunohost domain add ${newDomain}`,
+            `echo ${sshConfig.password} | sudo -S yunohost domain add ${configObj.domain}`,
             (err, stream) => {
               stream
                 .on('close', (code, signal) => {
@@ -128,7 +130,7 @@ const installAppsByIds = async (appIds, res) => {
                   console.log(`Command output: ${data}`);
                 })
                 .stderr.on('data', (data) => {
-                  const errorMessage = `Error adding domain "${newDomain}": "${data}"`;
+                  const errorMessage = `Error adding domain: "${data}"`;
                   console.error(errorMessage);
                   installErrors.push(errorMessage);
                 });
@@ -139,8 +141,6 @@ const installAppsByIds = async (appIds, res) => {
         conn.exec(
           `echo ${sshConfig.password} | sudo -S yunohost app install ${configurations[0].name} --args='${options}'`,
           (err, stream) => {
-            // ... (rest of your code)
-
             stream
               .on('close', (code, signal) => {
                 console.log(`SSH command exited with code ${code}`);
@@ -154,7 +154,7 @@ const installAppsByIds = async (appIds, res) => {
                   const errorMessage = `Error installing ${configurations[0].name}: Exit code ${code}`;
                   console.error(errorMessage);
                   installErrors.push(errorMessage);
-                } else{
+                } else {
                   // Mettre à jour le nombre d'applications installées
                   installedCount++;
                 }

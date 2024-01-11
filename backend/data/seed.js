@@ -104,18 +104,18 @@ const confguartionsData = [
         id: 4,
         applicationId: 3,
         name: "jitsi",
-        "newdomain": true,
+        newdomain: true,
         configs: {
             "domain": "jitsi.dcm1tlg3.nohost.me"
         }
     }
 ]
 confguartionsData.forEach(confguartion => {
-    dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.name, confguartion.configs);
+    dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.name, confguartion.newdomain, confguartion.configs);
 });
 
 bundlesData.forEach(bundle => {
-    dbOperations.insertBundle(bundle.id, bundle.name, bundle.description);
+    dbOperations.insertBundle(bundle.id, bundle.name, bundle.description, bundle.applicationIds);
 
     // Si le bundle a des applications, les lier au bundle
     if (bundle.applicationIds.length > 0) {
