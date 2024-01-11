@@ -7,7 +7,7 @@ defineProps({
     default: () => [
       {
         icon: '<i class="fab fa-github text-lg opacity-8"></i>',
-        link: "https://github.com/creativetimofficial",
+        link: "https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3",
       },
     ],
   },
