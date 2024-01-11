@@ -7,6 +7,12 @@ import Header from "../../../examples/Header.vue";
 import Footer from "./Sections/AuthorFooter.vue";
 import Profile from "./Sections/EtherpadDatail.vue";
 //import Profile from "./Sections/NextCloudDetail.vue";
+
+
+//Import footer //
+import DefaultFooter from "../../../../src/examples/footers/FooterDefault.vue";
+
+
 import Posts from "./Sections/AuthorPosts.vue";
 import Contact from "./Sections/AuthorContact.vue";
 
@@ -29,5 +35,5 @@ import image from "@/assets/img/city-profile.jpg";
     <Posts />
   </div>
   <Contact />
-  <Footer />
+  <DefaultFooter />
 </template>

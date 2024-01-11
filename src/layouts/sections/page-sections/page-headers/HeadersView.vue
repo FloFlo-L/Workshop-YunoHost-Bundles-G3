@@ -60,9 +60,12 @@ import setNavPills from "@/assets/js/nav-pills.js";
 //Vue Material Kit 2 components
 import MaterialButton from "@/components/MaterialButton.vue";
 
+
 //Vue Material Kit 2 components
 import MaterialProgress from "@/components/MaterialProgress.vue";
 
+//Importe footer
+import DefaultFooter from "../../../../../src//examples/footers/FooterDefault.vue";
 
 // hook
 onMounted(() => {
@@ -280,10 +283,7 @@ onMounted(() => {
             </div>
           </div>
         </div>
-
-
-       
-
+        <DefaultFooter />
 </template>
 
 <script>

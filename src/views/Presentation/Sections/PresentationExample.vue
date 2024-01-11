@@ -63,7 +63,7 @@ export default {
 
             <h2 class="text-dark mb-0">BUNDLES</h2>
             <p class="lead">
-              Infrastructure complète de services, combinant des outils de
+               combinant des outils de
               communication, de collaboration, et de bureautique pour répondre
               aux besoins variés des utilisateurs.
             </p>
