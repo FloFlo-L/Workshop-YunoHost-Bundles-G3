@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   headers: {
     type: Array,
@@ -108,4 +108,4 @@ defineProps({
       </div>
     </div>
   </section>
-</template>
+</template> -->
