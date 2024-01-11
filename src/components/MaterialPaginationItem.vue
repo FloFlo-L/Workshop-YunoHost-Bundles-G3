@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   label: {
     type: String,
@@ -40,4 +40,4 @@ function getClasses(active, disabled) {
       </span>
     </a>
   </li>
-</template>
+</template> -->

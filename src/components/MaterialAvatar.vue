@@ -14,7 +14,7 @@ defineProps({
   },
   borderRadius: {
     type: String,
-    default: "",
+    default: "A",
   },
 });
 function getClasses(size, borderRadius) {

@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   color: {
     type: String,
@@ -43,4 +43,4 @@ function getClasses(color, dismissible, fontWeight) {
       <span aria-hidden="true" class="text-lg font-weight-bold">&times;</span>
     </button>
   </div>
-</template>
+</template> -->

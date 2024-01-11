@@ -1,0 +1,262 @@
+[33mcommit 93c6c87d1d0f151d75b1fad03dbd65c78b46903e[m[33m ([m[1;36mHEAD -> [m[1;32mjaouani[m[33m, [m[1;31morigin/jaouani[m[33m)[m
+Merge: 35e6571 25bc060
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 21:31:54 2024 +0100
+
+    Merge branch 'jaouani' of https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3 into jaouani
+
+[33mcommit 35e65716fa3ed4f8c5b172ad07656d116c618eae[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 21:30:50 2024 +0100
+
+    modification background
+
+[33mcommit 25bc060e0c86764411ef84e8356b244d87105bc3[m
+Merge: cfa54a6 2a6902d
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 17:45:14 2024 +0100
+
+    Merge branch 'jaouani' of https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3 into jaouani
+
+[33mcommit cfa54a69fe17c4fbb906665b682bf3df74f22dae[m
+Merge: 4eaa430 22ec4ef
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 17:44:27 2024 +0100
+
+    merge avec zohraaaaaaaaaa qui fait toujours les problemes
+
+[33mcommit 2a6902d3f10c8a45c4f883f5ed1f68835f0dbdcf[m
+Merge: 4eaa430 22ec4ef
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 17:11:12 2024 +0100
+
+    merge with zohra
+
+[33mcommit 4eaa4304c5b21a014e4aad6b9a8829a857019906[m
+Merge: fa25cc4 483cba8
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 17:04:33 2024 +0100
+
+    suppression
+
+[33mcommit 22ec4efb46f1d53123b7195e6aed80a0c401cb73[m[33m ([m[1;32mZohra[m[33m)[m
+Merge: d80612b c276cc5
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Thu Jan 11 16:58:28 2024 +0100
+
+    merge zohra khalil
+
+[33mcommit d80612b8c702dfb8a4a5ae898ddc0d990df510b7[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Thu Jan 11 16:49:41 2024 +0100
+
+    suppression element
+
+[33mcommit fa25cc4d7a3b4db3990e5ab33310519b347730f1[m
+Merge: 0b13fcc c8cdd5f
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 16:45:57 2024 +0100
+
+    supprimer des trucs
+
+[33mcommit 483cba8a988987417d05c622544ec9efedfb0af0[m[33m ([m[1;31morigin/Sofiane[m[33m)[m
+Author: sofiane <sofianezouaoui77@gmail.com>
+Date:   Thu Jan 11 15:53:36 2024 +0100
+
+    suppression
+
+[33mcommit c8cdd5fd4621df783ff9a57f9da88952725160b2[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Thu Jan 11 15:37:17 2024 +0100
+
+    supprimer les components
+
+[33mcommit 554a3f54e7d5f991c384b6503a09ae36a9efec9c[m
+Author: sofiane <sofianezouaoui77@gmail.com>
+Date:   Thu Jan 11 15:35:03 2024 +0100
+
+    suppression fichiers en trop
+
+[33mcommit 0b13fccde9e5bf0e5f695ff423d39a9186200f0e[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 15:34:41 2024 +0100
+
+    footer
+
+[33mcommit 4dd6e1f339fd325038eaa5beb70f07053a10443b[m
+Merge: d2ddcdf 3a3c406
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 15:09:23 2024 +0100
+
+    Merge remote-tracking branch 'origin/Sofiane' into jaouani
+
+[33mcommit d2ddcdf2cf9151f3c57a1870d5c73e275aebf252[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 15:08:17 2024 +0100
+
+    6 commit
+
+[33mcommit 3a3c40600977f8cc3cb057c47654bba0ef0e5f13[m
+Merge: d854c76 2340083
+Author: sofiane <sofianezouaoui77@gmail.com>
+Date:   Thu Jan 11 13:50:11 2024 +0100
+
+    Merge remote-tracking branch 'origin/Zohra' into Sofiane
+
+[33mcommit c276cc55bdc772866721ce0e01c7aa2fd361465f[m
+Merge: 2e3c221 2340083
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 12:31:48 2024 +0100
+
+    merge zohra
+
+[33mcommit 2e3c221539d62043a4a23b4523fe4653851991a0[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 12:25:12 2024 +0100
+
+    progres bar
+
+[33mcommit 2340083e49ab877a2a656b16940bdeee3be980e8[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Thu Jan 11 12:09:40 2024 +0100
+
+    page detail etherpad
+
+[33mcommit d854c76f458ce48b200696b476b7320c1215dd35[m
+Author: sofiane <sofianezouaoui77@gmail.com>
+Date:   Thu Jan 11 12:00:28 2024 +0100
+
+    Modification header/images des pages
+
+[33mcommit 3ed95b727a8153089603af3d5fbdf33ad2a19348[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 10:18:57 2024 +0100
+
+    fiche technique
+
+[33mcommit 7e2b36595f00ca034b4bd72489080589757f136e[m
+Merge: 1d0c197 60c8b14
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Thu Jan 11 10:00:44 2024 +0100
+
+    Merge remote-tracking branch 'origin/jaouani' into Zohra
+
+[33mcommit a90849c57c5703038373d73cf688f3e96f94b790[m
+Merge: 70f219e 1d0c197
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 09:59:20 2024 +0100
+
+    fiche technique
+
+[33mcommit 70f219eead522e49318e85f962505c5ff78960c6[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Thu Jan 11 09:55:11 2024 +0100
+
+    fiche technique
+
+[33mcommit 1d0c197c64b5dc9ce2a0dbc829381e2f26de47b7[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Thu Jan 11 09:54:17 2024 +0100
+
+    footer
+
+[33mcommit 60c8b14778e250c88644c852cb3b7895d837dc0e[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Wed Jan 10 16:51:22 2024 +0100
+
+    5 commit modal
+
+[33mcommit 90224dc06b449611597784750ad671410124dd9e[m
+Merge: a86480a 70baa2a
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Wed Jan 10 16:10:55 2024 +0100
+
+    Merge remote-tracking branch 'origin/Zohra' into jaouani
+
+[33mcommit 734c6fb9b5d29d0399823fdc98b2b082533fdf63[m
+Merge: 70baa2a a86480a
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Wed Jan 10 16:09:30 2024 +0100
+
+    Merge remote-tracking branch 'origin/Jaouani' into Zohra
+
+[33mcommit a86480a6d87ad0494424f232b4f5a478557e974a[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Wed Jan 10 16:08:31 2024 +0100
+
+    4 commit lien
+
+[33mcommit 70baa2a0ceabe576f6369ebddadb290c59909a10[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Wed Jan 10 16:07:44 2024 +0100
+
+    page acceuil3
+
+[33mcommit 32aa53301297ed3baa1472ee29e4db62431713a3[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Wed Jan 10 14:03:54 2024 +0100
+
+    3 commit photos
+
+[33mcommit 3e3ccfb6bdce40286149d1df479b35fb1087e29e[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Wed Jan 10 13:39:14 2024 +0100
+
+    page acceuil2
+
+[33mcommit 6245a93afa88fa8d46096e14cd49afd47c08d621[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Wed Jan 10 13:04:36 2024 +0100
+
+    Second commit button pages
+
+[33mcommit 6893c7692ad02737dbf2c39c485217e2f100257a[m
+Author: khaliljaouani <khalil.jaouani29@gmail.com>
+Date:   Wed Jan 10 09:57:11 2024 +0100
+
+    first commit application pages
+
+[33mcommit 5115c35bf1a41b2fea77d87b2ffe1d0a8ca4daca[m[33m ([m[1;32mmain[m[33m)[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Tue Jan 9 15:44:19 2024 +0100
+
+    page acceuil
+
+[33mcommit 735802b157a421268fb14da6c4bf047e856eb774[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: FlorianLescribaa <100288490+FloFlo-L@users.noreply.github.com>
+Date:   Tue Jan 9 11:08:52 2024 +0100
+
+    Delete backend/package-lock.json
+
+[33mcommit a42cc4471d301db568bcdc48b03139fc6829762c[m
+Author: FlorianLescribaa <100288490+FloFlo-L@users.noreply.github.com>
+Date:   Tue Jan 9 11:08:32 2024 +0100
+
+    Delete backend/node_modules directory
+
+[33mcommit 7eff6e5457ab1b9e97aa397b7a8dd6481d75155c[m
+Author: Florian Lescribaa <florian.lescribaa@etudinat.univ-lr.fr>
+Date:   Tue Jan 9 11:07:06 2024 +0100
+
+    remove folder frontend
+
+[33mcommit 7deb767a6e43553d997aa5b11359fe7d46daac55[m
+Author: Florian Lescribaa <florian.lescribaa@etudinat.univ-lr.fr>
+Date:   Tue Jan 9 10:36:16 2024 +0100
+
+    backend + front
+
+[33mcommit ea31d0dbaa8de90170f5fe5154d448f5d2703275[m
+Author: Zoh-ra <98317353+Zoh-ra@users.noreply.github.com>
+Date:   Tue Jan 9 10:17:00 2024 +0100
+
+    insertion front
+
+[33mcommit 8c4572b3ea377cc821e286c2259207e688fa53a4[m
+Merge: cfa036f be9f275
+Author: Florian Lescribaa <florian.lescribaa@etudinat.univ-lr.fr>
+Date:   Mon Jan 8 16:43:28 2024 +0100
+
+    Merge branch 'main' of github.com:FloFlo-L/Workshop-YunoHost-Bundles-G3
+
+[33m
