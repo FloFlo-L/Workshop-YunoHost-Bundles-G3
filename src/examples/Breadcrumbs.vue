@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   routes: {
     type: Array,
@@ -27,4 +27,4 @@ defineProps({
       </li>
     </ol>
   </nav>
-</template>
+</template> -->

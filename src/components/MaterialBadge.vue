@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   size: {
     type: String,
@@ -56,4 +56,4 @@ function getClasses(variant, color, size, rounded) {
   <span class="badge" :class="getClasses(variant, color, size, rounded)">
     <slot />
   </span>
-</template>
+</template> -->
