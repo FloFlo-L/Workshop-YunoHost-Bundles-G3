@@ -5,12 +5,10 @@ defineProps({
     icon: String,
     link: String,
     default: () => [
-    
       {
         icon: '<i class="fab fa-github text-lg opacity-8"></i>',
         link: "https://github.com/creativetimofficial",
       },
-      
     ],
   },
   links: {
@@ -18,11 +16,12 @@ defineProps({
     name: String,
     href: String,
     default: () => [
-      { href: "/sections/page-sections/propos", name: "À propos" },
-      { href: "/sections/page-sections/fichetechnique", name: "Fiche technique" },
-      { href: "#", name: "GitHub" },
-   
-      
+      { href: "#", name: "À propos" },
+      { href: "#", name: "Fiche technique" },
+      {
+        href: "https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3",
+        name: "GitHub",
+      },
     ],
   },
 });
