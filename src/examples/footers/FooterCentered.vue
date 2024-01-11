@@ -17,7 +17,7 @@ defineProps({
     href: String,
     default: () => [
       { href: "#", name: "À propos" },
-      { href: "#", name: "Fiche technique" },
+      { href: "/sections/page-sections/fichetechnique", name: "Fiche technique" },
       {
         href: "https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3",
         name: "GitHub",
