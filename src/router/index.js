@@ -32,17 +32,6 @@ const router = createRouter({
       component: PresentationView,
     },
     {
-      path: "/pages/landing-pages/about-us",
-      name: "about",
-      component: AboutView,
-    },
-   
-    {
-      path: "/pages/landing-pages/contact-us",
-      name: "contactus",
-      component: ContactView,
-    },
-    {
       path: "/pages/landing-pages/author",
       name: "author",
       component: AuthorView,
@@ -57,11 +46,18 @@ const router = createRouter({
       name: "page-headers",
       component: PageHeaders,
     },
+    //////////////////////////////////////////////////////
     {
-      path: "/sections/page-sections/features",
+      path: "/sections/page-sections/propos",
       name: "page-features",
       component: PageFeatures,
     },
+    {
+      path: "/sections/page-sections/fichetechnique",
+      name: "page-features",
+      component: PageFeatures,
+    },
+    //////////////////////////////////////////////////////
     {
       path: "/sections/navigation/navbars",
       name: "navigation-navbars",

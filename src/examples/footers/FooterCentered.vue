@@ -18,8 +18,8 @@ defineProps({
     name: String,
     href: String,
     default: () => [
-      { href: "#", name: "À propos" },
-      { href: "#", name: "Fiche technique" },
+      { href: "/sections/page-sections/propos", name: "À propos" },
+      { href: "/sections/page-sections/fichetechnique", name: "Fiche technique" },
       { href: "#", name: "GitHub" },
    
       
