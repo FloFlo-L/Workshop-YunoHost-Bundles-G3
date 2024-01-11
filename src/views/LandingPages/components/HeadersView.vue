@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
 .wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -81,7 +81,7 @@ onMounted(() => {
        
         <h2 style="text-align: center; padding: 20px;" class="text-dark mb-0">Applications CHATO</h2>
             <div class="row">
-              <!--Card -->
+           <!-- Card -->
                   <div class="col-md-4 mt-md-0">
                       <a href="/sections/page-sections/page-headers" class="">
                           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
@@ -169,4 +169,4 @@ onMounted(() => {
 
               </BaseLayout>
 
-</template>
+</template>  -->

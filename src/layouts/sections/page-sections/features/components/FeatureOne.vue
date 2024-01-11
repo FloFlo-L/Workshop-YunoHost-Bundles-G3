@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import AboutUsOption from "@/views/LandingPages/components/AboutUsOption.vue";
 </script>
 <template>
@@ -39,4 +39,4 @@ import AboutUsOption from "@/views/LandingPages/components/AboutUsOption.vue";
       </div>
     </div>
   </section>
-</template>
+</template> -->

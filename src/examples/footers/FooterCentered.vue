@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   socials: {
     type: Array,
@@ -62,4 +62,4 @@ defineProps({
       </div>
     </div>
   </footer>
-</template>
+</template> -->

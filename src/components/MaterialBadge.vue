@@ -1,11 +1,11 @@
-<!-- <script setup>
+<script setup>
 defineProps({
   size: {
     type: String,
     validator(size) {
       return ["sm", "md", "lg"].includes(size);
     },
-    default: "md"
+    default: "md",
   },
   color: {
     validator(color) {
@@ -19,22 +19,22 @@ defineProps({
         "danger",
         "light",
         "dark",
-        "white"
+        "white",
       ].includes(color);
     },
-    default: "success"
+    default: "success",
   },
   variant: {
     type: String,
     validator(variant) {
       return ["fill", "gradient"].includes(variant);
     },
-    default: "fill"
+    default: "fill",
   },
   rounded: {
     type: Boolean,
-    default: false
-  }
+    default: false,
+  },
 });
 
 function getClasses(variant, color, size, rounded) {
@@ -56,4 +56,4 @@ function getClasses(variant, color, size, rounded) {
   <span class="badge" :class="getClasses(variant, color, size, rounded)">
     <slot />
   </span>
-</template> -->
+</template>

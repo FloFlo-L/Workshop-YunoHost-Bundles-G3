@@ -27,10 +27,7 @@
 .center-button {
   display: block;
   margin: 0 auto;
-  width: 25%;
-  
-
-  
+  width: 35%;
 }
 .fixed-size-image {
   display: block;
@@ -45,7 +42,7 @@
 import { onMounted } from "vue";
 
 // Sections components
-import BaseLayout from "../../components/BaseLayout.vue";
+//import BaseLayout from "../../components/BaseLayout.vue";
 // import View from "../../components/View.vue";
 
 // Headers page components
@@ -63,6 +60,8 @@ import MaterialButton from "@/components/MaterialButton.vue";
 //Vue Material Kit 2 components
 import MaterialProgress from "@/components/MaterialProgress.vue";
 
+//Import footer
+//import DefaultFooter from "../../../../../src/examples//footerdefault.vue";
 
 // hook
 onMounted(() => {
@@ -90,34 +89,32 @@ onMounted(() => {
             <!--v-if-->
           </div>
         </a>
-        <div
+        <!-- <div
           class="wrapper"
           onclick="window.location.href='./page-headers/EtherpadDatail.vue';"
           style="cursor: pointer"
-        >
-          <div class="box2">
-            <div class="mt-2 ms-1">
-              <h6 class="mb-0">Etherpad</h6>
-              <p class="text-secondary text-sm font-weight-normal">
-                10 Examples
-              </p>
-            </div>
-          </div>
-
-          <div class="box3">
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="checkbox"
-              v-model="checked"
-            />
-            <label for="checkbox">{{ checked }}</label>
+        > -->
+        <div class="box2">
+          <div class="mt-2 ms-1">
+            <h6 class="mb-0">Etherpad</h6>
+            <p class="text-secondary text-sm font-weight-normal">10 Examples</p>
           </div>
         </div>
+
+        <div class="box3">
+          <input
+            class="checkbox"
+            type="checkbox"
+            id="checkbox"
+            v-model="checked"
+          />
+          <label for="checkbox">{{ checked }}</label>
+        </div>
       </div>
+      <!-- </div> -->
 
       <div class="col-md-4 mt-md-0">
-        <a href="/sections/page-sections/page-headers" class="">
+        <a href="/sections/page-sections/page-headers/author" class="">
           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
             <img
               class="fixed-size-image"
@@ -150,7 +147,7 @@ onMounted(() => {
       </div>
 
       <div class="col-md-4 mt-md-0">
-        <a href="/sections/page-sections/page-headers" class="">
+        <a href="/sections/page-sections/page-headers/author" class="">
           <div class="card move-on-hover min-height-160 shadow-lg mt-4">
             <img
               class="fixed-size-image"
@@ -182,132 +179,136 @@ onMounted(() => {
         </div>
       </div>
 
-                  <div class="col-md-4 mt-md-0">
-                      <a href="/sections/page-sections/page-headers" class="">
-                          <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-                          <img class="fixed-size-image" src="../../../../assets/img/roundcube.jpg" alt="Page Headers" loading="lazy">
-                          <!--v-if-->
-                          </div>
-                      </a>
-                      <div class="wrapper">
-                        <div class="box2">
-                          <div class="mt-2 ms-1"><h6 class="mb-0">Roundcube</h6>
-                            <p class="text-secondary text-sm font-weight-normal">10 Examples</p>
-                          </div>
-                        </div>
-                        <div class="box3"><input class="checkbox" type="checkbox" id="checkbox" v-model="checked" />
-                          <label for="checkbox">{{ checked }}</label>
-                        </div>
-                      </div>
-                  </div>
+      <div class="col-md-4 mt-md-0">
+        <a href="/sections/page-sections/page-headers/author" class="">
+          <div class="card move-on-hover min-height-160 shadow-lg mt-4">
+            <img
+              class="fixed-size-image"
+              src="../../../../assets/img/roundcube.jpg"
+              alt="Page Headers"
+              loading="lazy"
+            />
+            <!--v-if-->
+          </div>
+        </a>
+        <div class="wrapper">
+          <div class="box2">
+            <div class="mt-2 ms-1">
+              <h6 class="mb-0">Roundcube</h6>
+              <p class="text-secondary text-sm font-weight-normal">
+                10 Examples
+              </p>
+            </div>
+          </div>
+          <div class="box3">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="checkbox"
+              v-model="checked"
+            />
+            <label for="checkbox">{{ checked }}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row justify-space-between text-center py-2">
+        <div class="col-12 mx-auto">
+          <MaterialButton
+            variant="gradient"
+            color="success"
+            @click="handleButtonClick(index)"
+            class="center-button"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+            >Installer</MaterialButton
+          >
+        </div>
+      </div>
+    </div>
+  </BaseLayout>
+
+  <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Téléchargement</h5>
+          <MaterialButton
+            color="none"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+          </MaterialButton>
+        </div>
+        <div class="modal-body">
+          Society has put up so many boundaries, so many limitations on what’s
+          right and wrong that it’s almost impossible to get a pure thought out.
+          <br /><br />
         </div>
 
-                <!-- Button  modal -->
-                <div style="text-align: center; margin-top: 40px;">
-                  <MaterialButton
-                      variant="gradient"
-                      color="success"
-                      data-bs-toggle="modal"
-                      data-bs-target="#exampleModal"
-                      class="center-button">
-                      Instaler
-                  </MaterialButton>
-                </div>  
-        
-
-              </BaseLayout>
-
-
-              <!-- Modal -->
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">
-                  Your modal title
-                </h5>
-                <MaterialButton
-                  color="none"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close">
-                </MaterialButton>
-              </div>
-              <div class="modal-body">
-                Society has put up so many boundaries, so many limitations on
-                what’s right and wrong that it’s almost impossible to get a pure
-                thought out.
-                <br /><br />
-                It’s like a little kid, a little boy, looking at colors, and no
-                one told him what colors are good, before somebody tells you you
-                shouldn’t like pink because that’s for girls, or you’d instantly
-                become a gay two-year-old.
-              </div>
-
-                 <section class="py-6 mt-4">
-                  <div id="app">
-                    <div class="container">
-                      <div style="text-align: center;"> {{ percent }} %</div>
-                    <div class="row justify-space-between py-2">
-                      <div class="col-lg-6 mx-auto">
-                        <MaterialProgress  class="mb-3" color="secondary" :style="{'width' : percentage + '%'}" />
-                      </div>
-                    </div>
-                  </div>
-                  </div>
-                </section>
-
-                
-
-
-              <div class="modal-footer justify-content-between">
-                <MaterialButton
-                  variant="gradient"
-                  color="dark"
-                  data-bs-dismiss="modal">
-                  Close
-                </MaterialButton>
-                <MaterialButton variant="gradient" color="success" class="mb-0">
-                  Save changes
-                </MaterialButton>
+        <section class="py-6 mt-4">
+          <div id="app">
+            <div class="container">
+              <div style="text-align: center">{{ percent }} %</div>
+              <div class="row justify-space-between py-2">
+                <div class="col-lg-6 mx-auto">
+                  <MaterialProgress
+                    class="mb-3"
+                    color="secondary"
+                    :style="{ width: percentage + '%' }"
+                  />
+                </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <div class="modal-footer justify-content-between">
+          <MaterialButton
+            variant="gradient"
+            color="dark"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </MaterialButton>
+          <MaterialButton variant="gradient" color="success" class="mb-0">
+            Save changes
+          </MaterialButton>
         </div>
-
-
-       
-
+      </div>
+    </div>
+  </div>
+  <DefaultFooter />
 </template>
 
 <script>
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
-      percentage: 0
-    }
+      percentage: 0,
+    };
   },
-  created () {
-    let interval = setInterval(()=> {
-      if (this.percentage < 100)
-        this.percentage += .1
-      else
-        clearInterval(interval)
-      
-    },)
+  created() {
+    let interval = setInterval(() => {
+      if (this.percentage < 100) this.percentage += 0.1;
+      else clearInterval(interval);
+    });
   },
   computed: {
-    percent(){
-    return this.percentage.toFixed();
-  }
-}
-}
-
+    percent() {
+      return this.percentage.toFixed();
+    },
+  },
+};
 </script>

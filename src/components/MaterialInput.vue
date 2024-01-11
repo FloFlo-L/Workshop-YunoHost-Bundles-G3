@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 defineProps({
   id: {
     type: String,
@@ -88,4 +88,4 @@ function getClasses(size, success, error) {
       :disabled="isDisabled"
     />
   </div>
-</template> -->
+</template>

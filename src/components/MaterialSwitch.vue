@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 defineProps({
   id: {
     type: String,
@@ -29,4 +29,4 @@ defineProps({
     /></label>
     <slot name="description" v-if="$slots.description" />
   </div>
-</template> -->
+</template>

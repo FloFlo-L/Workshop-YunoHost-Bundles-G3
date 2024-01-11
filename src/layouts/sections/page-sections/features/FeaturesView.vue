@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { onMounted } from "vue";
 
 // Sections components
@@ -31,4 +31,4 @@ onMounted(() => {
       <FeatureOne />
     </View>
   </BaseLayout>
-</template>
+</template> -->

@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 defineProps({
   variant: {
     type: String,
@@ -68,4 +68,4 @@ function getClasses(variant, color, size, fullWidth, disabled) {
   >
     <slot />
   </button>
-</template> -->
+</template>

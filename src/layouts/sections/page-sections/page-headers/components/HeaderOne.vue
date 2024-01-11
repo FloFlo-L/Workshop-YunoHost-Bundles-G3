@@ -1,10 +1,8 @@
-<script setup>
+<!-- <script setup>
 //Vue Material Kit 2 components
-import MaterialButton from "@/components/MaterialButton.vue";
+//import MaterialButton from "@/components/MaterialButton.vue";
 
 // image
-const bgImage =
-  "https://images.unsplash.com/photo-1520769945061-0a448c463865?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80";
 </script>
 <template>
   <header>
@@ -72,6 +70,5 @@ const bgImage =
         </div>
       </div>
     </nav>
-   
   </header>
-</template>
+</template> -->

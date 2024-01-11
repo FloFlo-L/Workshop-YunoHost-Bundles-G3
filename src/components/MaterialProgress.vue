@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 defineProps({
   variant: {
     type: String,
@@ -54,4 +54,4 @@ const getColor = (color, variant) => {
       aria-valuemax="100"
     ></div>
   </div>
-</template> -->
+</template>

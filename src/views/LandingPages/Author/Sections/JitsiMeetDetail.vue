@@ -6,7 +6,7 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // image
-import profilePic from "@/assets/img/nexcloud.png";
+import profilePic from "@/assets/img/jitsimeet.png";
 
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
@@ -36,7 +36,7 @@ onMounted(() => {
               <div
                 class="d-flex justify-content-between align-items-center mb-2"
               >
-                <h3 class="mb-0">NextCloud</h3>
+                <h3 class="mb-0">Jitsi Meet</h3>
                 <div class="d-block">
                   <MaterialButton
                     class="text-nowrap mb-0"
@@ -48,27 +48,13 @@ onMounted(() => {
                 </div>
               </div>
               <p class="text-lg mb-0">
-                Version Actuelle: 27.1.4~ynh1
+                Version Actuelle: 2.0.9164~ynh1
                 <br /><br />
-                Alternative Potentielle à: Apple iCloud, Dropbox, Google Apps,
-                Google Docs, Google Drive, Microsoft OneDrive
+                Alternative Potentielle à: Google Hangouts, Skype
                 <br /><br />
-                Nextcloud Hub est une plateforme de collaboration sur le contenu
-                entièrement open source, sur site. Les équipes accèdent,
-                partagent et éditent leurs documents, discutent et participent à
-                des appels vidéo, gèrent leurs courriels et calendriers, ainsi
-                que leurs projets sur des interfaces mobiles, de bureau et web.
-                <br /><br />
-                Fonctionnalités Spécifiques à YunoHost:
-                <br />
-                Intégration avec les utilisateurs et SSO de YunoHost - bouton de
-                déconnexion Autoriser un utilisateur à être l'administrateur
-                (défini à l'installation) Autoriser plusieurs instances de cette
-                application Accès facultatif au dossier utilisateur depuis les
-                fichiers Nextcloud (défini à l'installation, le partage est
-                activé par défaut) Servir les chemins /.well-known pour CalDAV
-                et CardDAV sur le domaine uniquement s'ils ne sont pas déjà
-                servis - par exemple par Baïkal
+                itsi Meet est une application JavaScript WebRTC (libre sous
+                licence Apache) qui utilise Jitsi Videobridge pour fournir des
+                conférences vidéo de haute qualité, sécurisées et évolutives.
               </p>
             </div>
           </div>

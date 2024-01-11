@@ -1,4 +1,4 @@
-<!-- <script setup>
+<script setup>
 defineProps({
   color: {
     type: String,
@@ -22,4 +22,4 @@ function getClasses(color, size) {
   <ul class="pagination" :class="getClasses(color, size)">
     <slot />
   </ul>
-</template> -->
+</template>

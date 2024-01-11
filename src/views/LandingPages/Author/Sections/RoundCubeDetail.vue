@@ -6,7 +6,7 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // image
-import profilePic from "@/assets/img/nexcloud.png";
+import profilePic from "@/assets/img/roundcube.png";
 
 // material-input
 import setMaterialInput from "@/assets/js/material-input";
@@ -36,7 +36,7 @@ onMounted(() => {
               <div
                 class="d-flex justify-content-between align-items-center mb-2"
               >
-                <h3 class="mb-0">NextCloud</h3>
+                <h3 class="mb-0">Round Cube</h3>
                 <div class="d-block">
                   <MaterialButton
                     class="text-nowrap mb-0"
@@ -48,27 +48,28 @@ onMounted(() => {
                 </div>
               </div>
               <p class="text-lg mb-0">
-                Version Actuelle: 27.1.4~ynh1
+                Version Actuelle: 1.6.0~ynh4
                 <br /><br />
-                Alternative Potentielle à: Apple iCloud, Dropbox, Google Apps,
-                Google Docs, Google Drive, Microsoft OneDrive
+                Alternative Potentielle à: GMail, Hotmail, Microsoft Outlook,
+                Yahoo! Mail
                 <br /><br />
-                Nextcloud Hub est une plateforme de collaboration sur le contenu
-                entièrement open source, sur site. Les équipes accèdent,
-                partagent et éditent leurs documents, discutent et participent à
-                des appels vidéo, gèrent leurs courriels et calendriers, ainsi
-                que leurs projets sur des interfaces mobiles, de bureau et web.
+                Roundcube est un client IMAP basé sur le navigateur avec une
+                interface utilisateur semblable à une application. Il offre
+                toutes les fonctionnalités que vous attendez d'un client de
+                messagerie, y compris la prise en charge MIME, le carnet
+                d'adresses, la manipulation de dossiers, la recherche de
+                messages et la vérification orthographique.
                 <br /><br />
                 Fonctionnalités Spécifiques à YunoHost:
                 <br />
-                Intégration avec les utilisateurs et SSO de YunoHost - bouton de
-                déconnexion Autoriser un utilisateur à être l'administrateur
-                (défini à l'installation) Autoriser plusieurs instances de cette
-                application Accès facultatif au dossier utilisateur depuis les
-                fichiers Nextcloud (défini à l'installation, le partage est
-                activé par défaut) Servir les chemins /.well-known pour CalDAV
-                et CardDAV sur le domaine uniquement s'ils ne sont pas déjà
-                servis - par exemple par Baïkal
+                Synchronisez vos alias de courrier électronique en tant
+                qu'identités dans Roundcube Installez les plugins contextmenu et
+                automatic addressbook par défaut Autorisez l'installation du
+                plugin de synchronisation CardDAV (carnet d'adresses) à
+                l'installation - notez que si vous avez installé Nextcloud ou
+                Baïkal, il ajoutera automatiquement le carnet d'adresses
+                correspondant et existant. Prise en charge du chiffrement PGP
+                avec le plugin Enigma par défaut.
               </p>
             </div>
           </div>
