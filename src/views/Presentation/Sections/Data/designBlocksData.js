@@ -13,12 +13,13 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-const imagesPrefix =
-  "https://raw.githubusercontent.com/creativetimofficial/public-assets/master/material-design-system/presentation/sections";
+const imagesPrefix = "./chemin_local";
 
-import imgPricing from "@/assets/img/pricing.png";
+import imgCat from "@/assets/img/cat.png";
+import imgComputers from "@/assets/img/computers.png";
+import imgClean from "@/assets/img/clean.png";
 import imgFeatures from "@/assets/img/features.png";
-import imgBlogPosts from "@/assets/img/blog-posts.png";
+import imgAssociation from "@/assets/img/assoc.png";
 // import imgTestimonials from "@/assets/img/testimonials.png";
 // import imgTeam from "@/assets/img/team.png";
 // import imgStat from "@/assets/img/stat.png";
@@ -35,7 +36,7 @@ export default [
     //description: "Des infrastructure complète de services.",
     items: [
       {
-        image: `${imagesPrefix}/headers.jpg`,
+        image: imgCat,
         title: "Monter un CHATONS",
         //subtitle: "10 Examples",
         route: "page-headers",
@@ -50,21 +51,21 @@ export default [
         pro: true,
       },
       {
-        image: imgPricing,
+        image: imgComputers,
         title: "Synchroniser ses données entre périphériques",
         //subtitle: "8 Examples",
-        route: "presentation",
+        route: "page-headers",
         pro: true,
       },
       {
-        image: `${imagesPrefix}/faq.jpg`,
+        image: imgAssociation,
         title: "Association",
         //subtitle: "1 Example",
         route: "presentation",
         pro: true,
       },
       {
-        image: imgBlogPosts,
+        image: imgClean,
         title: "“Nettoyer” son accès internet",
         //subtitle: "11 Examples",
         route: "presentation",
