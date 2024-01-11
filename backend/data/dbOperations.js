@@ -116,6 +116,7 @@ getApplicationsForBundle: (bundleId, callback) => {
       }
     });
   },
+  
  // Récupérer une application par son ID
  getBundleById: (bundleId, callback) => {
   const query = 'SELECT * FROM bundles WHERE id = ?';
