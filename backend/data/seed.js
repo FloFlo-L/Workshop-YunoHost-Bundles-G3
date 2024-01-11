@@ -104,8 +104,9 @@ const confguartionsData = [
         id: 4,
         applicationId: 3,
         name: "jitsi",
+        "newdomain": true,
         configs: {
-            "newdomain": "jitsi.dcm1tlg3.nohost.me"
+            "domain": "jitsi.dcm1tlg3.nohost.me"
         }
     }
 ]
