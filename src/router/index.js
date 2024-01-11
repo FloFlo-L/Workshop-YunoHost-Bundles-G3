@@ -36,13 +36,14 @@ const router = createRouter({
       name: "about",
       component: AboutView,
     },
+
     {
       path: "/pages/landing-pages/contact-us",
       name: "contactus",
       component: ContactView,
     },
     {
-      path: "/pages/landing-pages/author",
+      path: "/sections/page-sections/page-headers/author",
       name: "author",
       component: AuthorView,
     },
