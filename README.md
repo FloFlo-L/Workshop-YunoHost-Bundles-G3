@@ -10,7 +10,7 @@
 
 1. [Introduction](#introduction)
 2. [Objectifs](#objectifs)
-3. [Documentation technique](#documentationtechnique)
+3. [Documentation technique](#documentation_technique)
 4. [Installation](#installation)
 5. [Utilisation](#utilisation)
 6. [Contribuer](#contribuer)
@@ -119,7 +119,7 @@ API Endpoints
 
 Exemple d'Installation d'Applications via API
     ```bash
-    curl -X POST http://localhost:3000/api/install/apps -H "Content-Type: application/json" -d '{"appIds": [1, 2, 3]}'
+    curl -X POST http://localhost:3000/api/install/apps -H "Content-Type: application/json" -d '{"appIds": [1, 2,3]}'
 
 Exemple d'Obtention de Bundles via API
     ```bash
