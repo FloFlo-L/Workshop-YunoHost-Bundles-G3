@@ -72,7 +72,7 @@ Par ailleurs notre application s'appui sur une liste de technologies bien docume
 
 ### Structure du projet
 La structure de notre projet est organisée de manière à séparer clairement le frontend, développé en VueJS, du backend qui expose une API réalisée avec expressJs. 
-![structure](/public/structure.png)
+![structure](/public/structure.jpg)
 
 À la racine du projet, le dossier src englobe les fichiers du frontend, incluant les répertoires assets pour les ressources statiques, components pour les composants réutilisables, et routeur pour la gestion des routes de l'application VueJS. 
 
