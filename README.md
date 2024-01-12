@@ -11,7 +11,9 @@
 1. [Introduction](#introduction)
 2. [Objectifs](#objectifs)
 3. [Documentation technique](#documentation8technique)
-4. [Licence](#licence)
+4. [Installation](#installation)
+5. [Utilisation](#utilisation)
+6. [Contribuer](#contribuer)
 
 
 ## Introduction
@@ -87,5 +89,45 @@ La structure de notre projet est organisée de manière à séparer clairement l
 - L'aspect opérationnel de notre API est renforcé par la route `"POST /api/install"`, qui, avec le corps de la requête spécifié sous la forme `{ appIds: [id1, id2…] }`, permet l'installation facilitée et personnalisée d'applications sélectionnées. 
 
 
+## Installation
 
+1. **Prérequis**
+   - Node.js installé sur votre machine
+   - Base de données SQLite configurée
+
+2. Clonez le projet.
+   ```bash
+   git clone https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3.git
+
+3. Installer les dependances 
+    ```bash
+    cd votre-repository
+    npm install
+
+4. Exécutez le projet.
+   ```bash
+   npm start    
+
+
+
+## Utilisation
+
+API Endpoints
+- /api/bundles: Obtenez la liste de tous les bundles.
+- /api/applications: Obtenez la liste de toutes les applications.
+- /api/install/apps: Installez plusieurs applications en spécifiant les IDs.
+
+Exemple d'Installation d'Applications via API
+    `curl -X POST http://localhost:3000/api/install/apps -H "Content-Type: application/json" -d '{"appIds": [1, 2, 3]}'`
+
+Exemple d'Obtention de Bundles via API
+    `curl http://localhost:3000/api/bundles`
+
+
+## Contribuer
+1. Fork le projet.
+2. Créez une branche pour votre fonctionnalité (`git checkout -b fonctionnalite/nom`).
+3. Committez vos modifications (`git commit -am 'Ajout de nouvelle fonctionnalité'`).
+4. Pushez la branche (`git push origin fonctionnalite/nom`).
+5. Créez une pull request.
 
