@@ -6,7 +6,7 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // image
-import profilePic from "@/assets/img/etherpad.png";
+import profilePic from "@/assets/img/nextcloud.png";
 
 //Importe footer
 import DefaultFooter from "../../../../src/examples/footers/FooterDefault.vue";
@@ -49,10 +49,10 @@ onMounted(() => {
                 <div
                   class="d-flex justify-content-between align-items-center mb-2"
                 >
-                  <h3 class="mb-0">Etherpad</h3>
+                  <h3 class="mb-0">NextCloud</h3>
                   <div class="d-block">
                     <a
-                      href="https://etherpad.org/"
+                      href="https://nextcloud.com/fr/"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -73,19 +73,24 @@ onMounted(() => {
                   Alternative Potentielle à: Google Docs, G Suite, Microsoft
                   Word, Microsoft Office, Office 365
                   <br /><br />
-                  Etherpad est un éditeur collaboratif en temps réel extensible
-                  à des milliers d'utilisateurs simultanés en temps réel. Il
-                  offre des capacités complètes d'exportation de données et
-                  fonctionne sur votre serveur, sous votre contrôle. Cette
-                  version d'Etherpad est installée sans plugins et utilise Redis
-                  comme base de données.
+                  Nextcloud Hub est une plateforme de collaboration sur le
+                  contenu entièrement open source, sur site. Les équipes
+                  accèdent, partagent et éditent leurs documents, discutent et
+                  participent à des appels vidéo, gèrent leurs courriels et
+                  calendriers, ainsi que leurs projets sur des interfaces
+                  mobiles, de bureau et web.
                   <br /><br />
-                  Note: La sauvegarde et la restauration de la base de données
-                  Redis ne sont pas entièrement mises en œuvre.
-                  <br /><br />
-                  Si vous souhaitez installer Etherpad avec des plugins et une
-                  base de données MySQL, consultez :
-                  https://github.com/YunoHost-Apps/etherpad_mypads_ynh
+                  Fonctionnalités Spécifiques à YunoHost:
+                  <br />
+                  Intégration avec les utilisateurs et SSO de YunoHost - bouton
+                  de déconnexion Autoriser un utilisateur à être
+                  l'administrateur (défini à l'installation) Autoriser plusieurs
+                  instances de cette application Accès facultatif au dossier
+                  utilisateur depuis les fichiers Nextcloud (défini à
+                  l'installation, le partage est activé par défaut) Servir les
+                  chemins /.well-known pour CalDAV et CardDAV sur le domaine
+                  uniquement s'ils ne sont pas déjà servis - par exemple par
+                  Baïkal
                 </p>
               </div>
             </div>

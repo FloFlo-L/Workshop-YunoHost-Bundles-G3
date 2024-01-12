@@ -18,7 +18,7 @@ defineProps({
     default: () => [
       {
         icon: '<i class="fab fa-github text-lg opacity-8"></i>',
-        link: "https://github.com/creativetimofficial",
+        link: "https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3",
       },
     ],
   },
@@ -55,26 +55,10 @@ defineProps({
             </a>
             <h6 class="font-weight-bolder mb-4">{{ brand.name }}</h6>
           </div>
-          <div>
-            <ul class="d-flex flex-row ms-n3 nav">
-              <li
-                class="nav-item"
-                v-for="{ icon, link } of socials"
-                :key="link"
-              >
-                <a
-                  class="nav-link pe-1"
-                  :href="link"
-                  target="_blank"
-                  v-html="icon"
-                >
-                </a>
-              </li>
-            </ul>
-          </div>
         </div>
+        <!-- Menus de navigation -->
         <div
-          class="col-md-2 col-sm-6 col-6 mb-4"
+          class="col-md-3 col-sm-6 col-6 mb-4"
           v-for="{ name, items } of menus"
           :key="name"
         >
@@ -83,6 +67,27 @@ defineProps({
             <li class="nav-item" v-for="item of items" :key="item.name">
               <a class="nav-link" :href="item.href" target="_blank">
                 {{ item.name }}
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div
+          style="
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;
+          "
+        >
+          <ul class="d-flex flex-row ms-n3 nav">
+            <li class="nav-item" v-for="{ icon, link } of socials" :key="link">
+              <a
+                class="nav-link pe-1"
+                :href="link"
+                target="_blank"
+                v-html="icon"
+              >
               </a>
             </li>
           </ul>
@@ -97,7 +102,7 @@ defineProps({
               <a
                 href="https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3"
                 target="_blank"
-                >Groupe 4</a
+                >Groupe 3</a
               >.
             </p>
           </div>

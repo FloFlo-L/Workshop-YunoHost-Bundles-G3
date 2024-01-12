@@ -6,7 +6,7 @@ import MaterialAvatar from "@/components/MaterialAvatar.vue";
 import MaterialButton from "@/components/MaterialButton.vue";
 
 // image
-import profilePic from "@/assets/img/etherpad.png";
+import profilePic from "@/assets/img/roundcube.png";
 
 //Importe footer
 import DefaultFooter from "../../../../src/examples/footers/FooterDefault.vue";
@@ -49,13 +49,13 @@ onMounted(() => {
                 <div
                   class="d-flex justify-content-between align-items-center mb-2"
                 >
-                  <h3 class="mb-0">Etherpad</h3>
-                  <div class="d-block">
-                    <a
-                      href="https://etherpad.org/"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
+                  <h3 class="mb-0">Round Cube</h3>
+                  <a
+                    href="https://roundcube.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <div class="d-block">
                       <MaterialButton
                         class="text-nowrap mb-0"
                         variant="outline"
@@ -64,28 +64,32 @@ onMounted(() => {
                       >
                         VOIR
                       </MaterialButton>
-                    </a>
-                  </div>
+                    </div>
+                  </a>
                 </div>
                 <p class="text-lg mb-0">
-                  Version Actuelle: 1.9.6~ynh1
+                  Version Actuelle: 1.6.0~ynh4
                   <br /><br />
-                  Alternative Potentielle à: Google Docs, G Suite, Microsoft
-                  Word, Microsoft Office, Office 365
+                  Alternative Potentielle à: GMail, Hotmail, Microsoft Outlook,
+                  Yahoo! Mail
                   <br /><br />
-                  Etherpad est un éditeur collaboratif en temps réel extensible
-                  à des milliers d'utilisateurs simultanés en temps réel. Il
-                  offre des capacités complètes d'exportation de données et
-                  fonctionne sur votre serveur, sous votre contrôle. Cette
-                  version d'Etherpad est installée sans plugins et utilise Redis
-                  comme base de données.
+                  Roundcube est un client IMAP basé sur le navigateur avec une
+                  interface utilisateur semblable à une application. Il offre
+                  toutes les fonctionnalités que vous attendez d'un client de
+                  messagerie, y compris la prise en charge MIME, le carnet
+                  d'adresses, la manipulation de dossiers, la recherche de
+                  messages et la vérification orthographique.
                   <br /><br />
-                  Note: La sauvegarde et la restauration de la base de données
-                  Redis ne sont pas entièrement mises en œuvre.
-                  <br /><br />
-                  Si vous souhaitez installer Etherpad avec des plugins et une
-                  base de données MySQL, consultez :
-                  https://github.com/YunoHost-Apps/etherpad_mypads_ynh
+                  Fonctionnalités Spécifiques à YunoHost:
+                  <br />
+                  Synchronisez vos alias de courrier électronique en tant
+                  qu'identités dans Roundcube Installez les plugins contextmenu
+                  et automatic addressbook par défaut Autorisez l'installation
+                  du plugin de synchronisation CardDAV (carnet d'adresses) à
+                  l'installation - notez que si vous avez installé Nextcloud ou
+                  Baïkal, il ajoutera automatiquement le carnet d'adresses
+                  correspondant et existant. Prise en charge du chiffrement PGP
+                  avec le plugin Enigma par défaut.
                 </p>
               </div>
             </div>
