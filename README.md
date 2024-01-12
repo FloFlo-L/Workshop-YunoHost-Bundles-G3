@@ -112,16 +112,16 @@ La structure de notre projet est organisée de manière à séparer clairement l
 
 ## Utilisation
 
-API Endpoints
+1. API Endpoints
 - /api/bundles: Obtenez la liste de tous les bundles.
 - /api/applications: Obtenez la liste de toutes les applications.
 - /api/install/apps: Installez plusieurs applications en spécifiant les IDs.
 
-Exemple d'Installation d'Applications via API
+2. Exemple d'Installation d'Applications via API
     ```bash
     curl -X POST http://localhost:3000/api/install/apps -H "Content-Type: application/json" -d '{"appIds": [1, 2,3]}'
 
-Exemple d'Obtention de Bundles via API
+3. Exemple d'Obtention de Bundles via API
     ```bash
     curl http://localhost:3000/api/bundles
 
