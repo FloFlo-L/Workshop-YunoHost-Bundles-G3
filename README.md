@@ -99,14 +99,20 @@ La structure de notre projet est organisée de manière à séparer clairement l
    ```bash
    git clone https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3.git
 
-3. Installer les dependances 
+3. Installer les dépendances 
+    A la racine du projet
     ```bash
-    cd votre-repository
+    npm install
+    cd backend/
     npm install
 
-4. Exécutez le projet.
+4. Exécutez le projet en front (lancer le serveur front)
    ```bash
-   npm start    
+    npm run dev
+5. Exécutez le projet en front (lancer le serveur back)
+   ```bash   
+    cd backend/
+    npm start    
 
 
 
