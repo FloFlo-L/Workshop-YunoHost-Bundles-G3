@@ -1,9 +1,9 @@
 # Workshop-YunoHost-Bundles-G3
-------- Workshop de spécialité
-------- M1TL
-------- Digital Campus 
-------- 2023 - 2024
-------- [Khalil Jaouani]  - [Vanelle NGADJUI] - [Zohra Hussain] - [Sofiane Zouaoui] - [Florian Lescribaa]
+- ------ Workshop de spécialité
+- ------ M1TL
+- ------ Digital Campus 
+- ------ 2023 - 2024
+- ------ [Khalil Jaouani]  - [Vanelle NGADJUI] - [Zohra Hussain] - [Sofiane Zouaoui] - [Florian Lescribaa]
 
 
 ## Table des Matières
