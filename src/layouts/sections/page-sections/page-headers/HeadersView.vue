@@ -127,7 +127,6 @@ onMounted(() => {
         <div @click="getPosts"></div>
         <ul>
           <li v-for="post in posts" :key="post.id" data-test="post">
-            aaaa
             {{ post.id }}
           </li>
         </ul>
