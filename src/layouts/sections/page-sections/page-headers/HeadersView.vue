@@ -10,7 +10,6 @@
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(4, 10px);
 }
-
 .box2 {
   grid-column-start: 1;
   grid-column-end: 1;
@@ -25,7 +24,6 @@
   padding-top: 15px;
   padding-right: 10px;
 }
-
 .checkbox {
   width: 20px;
   height: 20px;
@@ -43,40 +41,24 @@
   height: auto;
   max-width: 400px;
 }
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 </style>
 <script setup>
 import { onMounted } from "vue";
 
 // Sections components
 import BaseLayout from "../../components/BaseLayout.vue";
-// import View from "../../components/View.vue";
-
-// Headers page components
-// import HeaderOne from "./components/HeaderOne.vue";
-
-// Headers page components codes
-// import { header1Code } from "./components/codes";
 
 // nav-pills
 import setNavPills from "@/assets/js/nav-pills.js";
 
-
-
 //Vue Material Kit 2 components
 import MaterialButton from "@/components/MaterialButton.vue";
-
 
 //Vue Material Kit 2 components
 import MaterialProgress from "@/components/MaterialProgress.vue";
 
 //Importe footer
 import DefaultFooter from "../../../../../src/examples/footers/FooterDefault.vue";
-
 
 // image
 import image from "@/assets/img/city-profile.jpg";
@@ -96,164 +78,142 @@ onMounted(() => {
       <span class="mask bg-gradient-dark opacity-8"></span>
     </div>
   </Header>
-
-
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
-    
-
-<BaseLayout
-  :breadcrumb="[{ label: 'Home', route: '/' }, { label: 'Page Headers' }]"
->
-  <h2 style="text-align: center; padding: 20px" class="text-dark mb-0">
+    <BaseLayout
+    :breadcrumb="[{ label: 'Home', route: '/' }, { label: 'Page Headers' }]">
+    <h2 style="text-align: center; padding: 20px" class="text-dark mb-0">
     Applications CHATONS
-  </h2>
-  <div class="row">
-    <!--Card -->
-    <div class="col-md-4 mt-md-0">
-      <a href="/sections/page-sections/page-headers/author" class="">
-        <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-          <img
-            class="fixed-size-image"
-            src="../../../../assets/img/etherpad.jpg"
-            alt="Page Headers"
-            loading="lazy"
-          />
-          <!--v-if-->
-        </div>
-      </a>
-      <div
-        class="wrapper"
-        onclick="window.location.href='./page-headers/EtherpadDatail.vue';"
-        style="cursor: pointer"
-      >
-        <div class="box2">
-          <div class="mt-2 ms-1">
-            <h6 class="mb-0">Etherpad</h6>
-            <p class="text-secondary text-sm font-weight-normal">
-              10 Examples
-            </p>
+    </h2>
+    <div class="row">
+      <!--Card -->
+      <div class="col-md-4 mt-md-0">
+        <a href="/sections/page-sections/page-headers/author" class="">
+          <div class="card move-on-hover min-height-160 shadow-lg mt-4">
+            <img
+              class="fixed-size-image"
+              src="../../../../assets/img/etherpad.jpg"
+              alt="Page Headers"
+              loading="lazy"
+            />
+            <!--v-if-->
+          </div>
+        </a>
+        <div
+          class="wrapper"
+          onclick="window.location.href='./page-headers/EtherpadDatail.vue';"
+          style="cursor: pointer"
+        >
+          <div class="box2">
+            <div class="mt-2 ms-1">
+              <h6 class="mb-0">Etherpad</h6>
+            </div>
+          </div>
+          <div class="box3">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="checkbox"
+              v-model="checked"
+            />
+            <label for="checkbox">{{ checked }}</label>
           </div>
         </div>
-
-        <div class="box3">
-          <input
-            class="checkbox"
-            type="checkbox"
-            id="checkbox"
-            v-model="checked"
-          />
-          <label for="checkbox">{{ checked }}</label>
-        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 mt-md-0">
-      <a href="/sections/page-sections/page-headers/nextclouddetail" class="">
-        <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-          <img
-            class="fixed-size-image"
-            src="../../../../assets/img/nextcloud.jpg"
-            alt="Page Headers"
-            loading="lazy"
-          />
-          <!--v-if-->
-        </div>
-      </a>
-      <div class="wrapper">
-        <div class="box2">
-          <div class="mt-2 ms-1">
-            <h6 class="mb-0">Nextcloud</h6>
-            <p class="text-secondary text-sm font-weight-normal">
-              10 Examples
-            </p>
+      <div class="col-md-4 mt-md-0">
+        <a href="/sections/page-sections/page-headers/nextclouddetail" class="">
+          <div class="card move-on-hover min-height-160 shadow-lg mt-4">
+            <img
+              class="fixed-size-image"
+              src="../../../../assets/img/nextcloud.jpg"
+              alt="Page Headers"
+              loading="lazy"
+            />
+            <!--v-if-->
+          </div>
+        </a>
+        <div class="wrapper">
+          <div class="box2">
+            <div class="mt-2 ms-1">
+              <h6 class="mb-0">Nextcloud</h6>
+            
+            </div>
+          </div>
+          <div class="box3">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="checkbox"
+              v-model="checked"
+            />
+            <label for="checkbox">{{ checked }}</label>
           </div>
         </div>
-        <div class="box3">
-          <input
-            class="checkbox"
-            type="checkbox"
-            id="checkbox"
-            v-model="checked"
-          />
-          <label for="checkbox">{{ checked }}</label>
-        </div>
       </div>
-    </div>
 
-    <div class="col-md-4 mt-md-0">
-      <a href="/sections/page-sections/page-headers/jitsidetail" class="">
-        <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-          <img
-            class="fixed-size-image"
-            src="../../../../assets/img/Jitsi.jpg"
-            alt="Page Headers"
-            loading="lazy"
-          />
-          <!--v-if-->
-        </div>
-      </a>
-      <div class="wrapper">
-        <div class="box2">
-          <div class="mt-2 ms-1">
-            <h6 class="mb-0">Jitsi</h6>
-            <p class="text-secondary text-sm font-weight-normal">
-              10 Examples
-            </p>
+      <div class="col-md-4 mt-md-0">
+        <a href="/sections/page-sections/page-headers/jitsidetail" class="">
+          <div class="card move-on-hover min-height-160 shadow-lg mt-4">
+            <img
+              class="fixed-size-image"
+              src="../../../../assets/img/Jitsi.jpg"
+              alt="Page Headers"
+              loading="lazy"
+            />
+            <!--v-if-->
+          </div>
+        </a>
+        <div class="wrapper">
+          <div class="box2">
+            <div class="mt-2 ms-1">
+              <h6 class="mb-0">Jitsi</h6>
+            
+            </div>
+          </div>
+          <div class="box3">
+            <input
+              class="checkbox"
+              type="checkbox"
+              id="checkbox"
+              v-model="checked"
+            />
+            <label for="checkbox">{{ checked }}</label>
           </div>
         </div>
-        <div class="box3">
-          <input
-            class="checkbox"
-            type="checkbox"
-            id="checkbox"
-            v-model="checked"
-          />
-          <label for="checkbox">{{ checked }}</label>
-        </div>
       </div>
-    </div>
 
-                <div class="col-md-4 mt-md-0">
-                    <a href="/sections/page-sections/page-headers/roundcubedetail" class="">
-                        <div class="card move-on-hover min-height-160 shadow-lg mt-4">
-                        <img class="fixed-size-image" src="../../../../assets/img/roundcube.jpg" alt="Page Headers" loading="lazy">
-                        <!--v-if-->
+      <div class="col-md-4 mt-md-0">
+                      <a href="/sections/page-sections/page-headers/roundcubedetail" class="">
+                          <div class="card move-on-hover min-height-160 shadow-lg mt-4">
+                          <img class="fixed-size-image" src="../../../../assets/img/roundcube.jpg" alt="Page Headers" loading="lazy">
+                          <!--v-if-->
+                          </div>
+                      </a>
+                      <div class="wrapper">
+                        <div class="box2">
+                          <div class="mt-2 ms-1"><h6 class="mb-0">Roundcube</h6>
+                          </div>
                         </div>
-                    </a>
-                    <div class="wrapper">
-                      <div class="box2">
-                        <div class="mt-2 ms-1"><h6 class="mb-0">Roundcube</h6>
-                          <p class="text-secondary text-sm font-weight-normal">10 Examples</p>
+                        <div class="box3"><input class="checkbox" type="checkbox" id="checkbox" v-model="checked" />
+                          <label for="checkbox">{{ checked }}</label>
                         </div>
                       </div>
-                      <div class="box3"><input class="checkbox" type="checkbox" id="checkbox" v-model="checked" />
-                        <label for="checkbox">{{ checked }}</label>
-                      </div>
-                    </div>
-                </div>
-      </div>
- 
-  <div class="container">
-    <div class="row justify-space-between text-center py-2">
-      <div class="col-12 mx-auto">
-          
-          <MaterialButton variant="gradient" color="success"   @click="handleButtonClick(index)"
-    class="center-button"
-    data-bs-toggle="modal"
-    data-bs-target="#exampleModal">Installer</MaterialButton>
-
       </div>
     </div>
-  </div>
-
-
-
-
-
   
-</BaseLayout>
-
-</div>
+      <div class="container">
+        <div class="row justify-space-between text-center py-2">
+          <div class="col-12 mx-auto">
+            <MaterialButton variant="gradient" color="success"   @click="handleButtonClick(index)"
+                            class="center-button"
+                            data-bs-toggle="modal"
+                            data-bs-target="#exampleModal">Installer
+            </MaterialButton>
+          </div>
+        </div>
+      </div>  
+    </BaseLayout>
+  </div>
 
          <!-- Modal -->
   <div
