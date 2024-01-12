@@ -3,6 +3,11 @@ import PresentationView from "../views/Presentation/PresentationView.vue";
 //import AboutView from "../views/LandingPages/AboutUs/AboutView.vue";
 //import ContactView from "../views/LandingPages/ContactUs/ContactView.vue";
 import AuthorView from "../views/LandingPages/Author/AuthorView.vue";
+
+import NextCloudDetail from "../views/LandingPages/NextCloud/NextCloudDetail.vue";
+import JitsiDetail from "../views/LandingPages/Jitsi/JitsiDetail.vue";
+import RoundcubeDetail from "../views/LandingPages/Roundcube/RoundcubeDetail.vue";
+
 //import SignInBasicView from "../views/LandingPages/SignIn/BasicView.vue";
 import PageHeaders from "../layouts/sections/page-sections/page-headers/HeadersView.vue";
 import PageFeatures from "../layouts/sections/page-sections/features/FeaturesView.vue";
@@ -47,6 +52,28 @@ const router = createRouter({
       name: "author",
       component: AuthorView,
     },
+
+    {
+      path: "/sections/page-sections/page-headers/nextclouddetail",
+      name: "nextclouddetail",
+      component: NextCloudDetail,
+    },
+
+    {
+      path: "/sections/page-sections/page-headers/jitsidetail",
+      name: "jitsidetail",
+      component: JitsiDetail,
+    },
+    {
+    path: "/sections/page-sections/page-headers/roundcubedetail",
+    name: "roundcubedetail",
+    component: RoundcubeDetail,
+  },
+
+
+
+
+
     // {
     //   path: "/pages/landing-pages/basic",
     //   name: "signin-basic",

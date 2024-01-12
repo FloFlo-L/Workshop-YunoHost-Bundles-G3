@@ -65,6 +65,8 @@ import BaseLayout from "../../components/BaseLayout.vue";
 // nav-pills
 import setNavPills from "@/assets/js/nav-pills.js";
 
+
+
 //Vue Material Kit 2 components
 import MaterialButton from "@/components/MaterialButton.vue";
 
@@ -73,7 +75,7 @@ import MaterialButton from "@/components/MaterialButton.vue";
 import MaterialProgress from "@/components/MaterialProgress.vue";
 
 //Importe footer
-import DefaultFooter from "../../../../../src//examples/footers/FooterDefault.vue";
+import DefaultFooter from "../../../../../src/examples/footers/FooterDefault.vue";
 
 
 // image
@@ -146,7 +148,7 @@ onMounted(() => {
     </div>
 
     <div class="col-md-4 mt-md-0">
-      <a href="/sections/page-sections/page-headers" class="">
+      <a href="/sections/page-sections/page-headers/nextclouddetail" class="">
         <div class="card move-on-hover min-height-160 shadow-lg mt-4">
           <img
             class="fixed-size-image"
@@ -179,7 +181,7 @@ onMounted(() => {
     </div>
 
     <div class="col-md-4 mt-md-0">
-      <a href="/sections/page-sections/page-headers" class="">
+      <a href="/sections/page-sections/page-headers/jitsidetail" class="">
         <div class="card move-on-hover min-height-160 shadow-lg mt-4">
           <img
             class="fixed-size-image"
@@ -212,7 +214,7 @@ onMounted(() => {
     </div>
 
                 <div class="col-md-4 mt-md-0">
-                    <a href="/sections/page-sections/page-headers" class="">
+                    <a href="/sections/page-sections/page-headers/roundcubedetail" class="">
                         <div class="card move-on-hover min-height-160 shadow-lg mt-4">
                         <img class="fixed-size-image" src="../../../../assets/img/roundcube.jpg" alt="Page Headers" loading="lazy">
                         <!--v-if-->
@@ -251,98 +253,87 @@ onMounted(() => {
   
 </BaseLayout>
 
-            <!-- Modal -->
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
-                Your modal title
-              </h5>
-              <MaterialButton
-                color="none"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close">
-              </MaterialButton>
-            </div>
-            <div class="modal-body">
-              Society has put up so many boundaries, so many limitations on
-              what’s right and wrong that it’s almost impossible to get a pure
-              thought out.
-              <br /><br />
-              It’s like a little kid, a little boy, looking at colors, and no
-              one told him what colors are good, before somebody tells you you
-              shouldn’t like pink because that’s for girls, or you’d instantly
-              become a gay two-year-old.
-            </div>
+</div>
 
-               <section class="py-6 mt-4">
-                <div id="app">
-                  <div class="container">
-                    <div style="text-align: center;"> {{ percent }} %</div>
-                  <div class="row justify-space-between py-2">
-                    <div class="col-lg-6 mx-auto">
-                      <MaterialProgress  class="mb-3" color="secondary" :style="{'width' : percentage + '%'}" />
-                    </div>
-                  </div>
+         <!-- Modal -->
+  <div
+    class="modal fade"
+    id="exampleModal"
+    tabindex="-1"
+    aria-labelledby="exampleModalLabel"
+    aria-hidden="true"
+  >
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Téléchargement</h5>
+          <MaterialButton
+            color="none"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          >
+          </MaterialButton>
+        </div>
+        <div class="modal-body">
+          Society has put up so many boundaries, so many limitations on what’s
+          right and wrong that it’s almost impossible to get a pure thought out.
+          <br /><br />
+        </div>
+
+        <section class="py-6 mt-4">
+          <div id="app">
+            <div class="container">
+              <div style="text-align: center">{{ percent }} %</div>
+              <div class="row justify-space-between py-2">
+                <div class="col-lg-6 mx-auto">
+                  <MaterialProgress
+                    class="mb-3"
+                    color="secondary"
+                    :style="{ width: percentage + '%' }"
+                  />
                 </div>
-                </div>
-              </section>
-
-              
-
-
-            <div class="modal-footer justify-content-between">
-              <MaterialButton
-                variant="gradient"
-                color="dark"
-                data-bs-dismiss="modal">
-                Close
-              </MaterialButton>
-              <MaterialButton variant="gradient" color="success" class="mb-0">
-                Save changes
-              </MaterialButton>
+              </div>
             </div>
           </div>
+        </section>
+
+        <div class="modal-footer justify-content-between">
+          <MaterialButton
+            variant="gradient"
+            color="dark"
+            data-bs-dismiss="modal"
+          >
+            Close
+          </MaterialButton>
+          <MaterialButton variant="gradient" color="success" class="mb-0">
+            Save changes
+          </MaterialButton>
         </div>
       </div>
-      
+    </div>
   </div>
-
-        <DefaultFooter />
+  <DefaultFooter />
 </template>
-
-
 
 <script>
 export default {
-  name: 'app',
+  name: "app",
   data() {
     return {
-      percentage: 0
-    }
+      percentage: 0,
+    };
   },
-  created () {
-    let interval = setInterval(()=> {
-      if (this.percentage < 100)
-        this.percentage += .1
-      else
-        clearInterval(interval)
-      
-    },)
+  created() {
+    let interval = setInterval(() => {
+      if (this.percentage < 100) this.percentage += 0.1;
+      else clearInterval(interval);
+    });
   },
   computed: {
-    percent(){
-    return this.percentage.toFixed();
-  }
-}
-}
-
+    percent() {
+      return this.percentage.toFixed();
+    },
+  },
+};
 </script>

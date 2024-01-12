@@ -74,12 +74,12 @@ onMounted(() => {
    
     :breadcrumb="[
       { label: 'Home', route: '/' },
-      { label: 'Page Headers' },
+      { label: 'Applications' },
     ]"
   >
   
        
-        <h2 style="text-align: center; padding: 20px;" class="text-dark mb-0">Applications CHATO</h2>
+        <h2 style="text-align: center; padding: 20px;" class="text-dark mb-0">Applications CHATON</h2>
             <div class="row">
               <!--Card -->
                   <div class="col-md-4 mt-md-0">
