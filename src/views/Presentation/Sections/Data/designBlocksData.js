@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-const imagesPrefix = "./chemin_local";
+//const imagesPrefix = "./chemin_local";
 
 import imgCat from "@/assets/img/cat.png";
 import imgComputers from "@/assets/img/computers.png";
