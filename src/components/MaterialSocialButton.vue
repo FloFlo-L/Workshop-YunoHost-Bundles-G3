@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 defineProps({
   route: {
     type: String,
@@ -28,4 +28,4 @@ defineProps({
     ></i>
     {{ label }}
   </a>
-</template>
+</template> -->
