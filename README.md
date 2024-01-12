@@ -9,7 +9,7 @@
 ## Table des Matières
 
 1. [Introduction](#introduction)
-2. [Objectif](#objectif)
+2. [Objectifs](#objectifs)
 3. [Contribuer](#contribuer)
 4. [Licence](#licence)
 
@@ -26,9 +26,9 @@ Actuellement, le nombre d'applications disponibles dépasse 500, créant un déf
 Durant ce workshop, l'objectif de ce projet est de concevoir une interface web permettant d'installer des "bundles" d'applications, des ensembles pré-configurés répondant à des utilisations spécifiques.
 
 # Choix du bundle
-	Pour le développement de notre application, notre groupe a décidé de se focaliser sur le bundle “Monter un chaton”. Ce bundle vise à créer une infrastructure complète de services, combinant des outils de communication, de collaboration, et de bureautique pour répondre aux besoins variés des utilisateurs. 
+Pour le développement de notre application, notre groupe a décidé de se focaliser sur le bundle “Monter un chaton”. Ce bundle vise à créer une infrastructure complète de services, combinant des outils de communication, de collaboration, et de bureautique pour répondre aux besoins variés des utilisateurs. 
 
-	Le bundle final aura pour objectif de réunir une sélection d'applications couvrant la gestion d'un site web, la collaboration en ligne, les réunions virtuelles, la bureautique, la création de sites internet, la recherche en ligne, la gestion de projets, la traduction de texte, la synchronisation de fichiers, et la messagerie, tout en s'adaptant à la puissance de la machine, au temps disponible, et au public cible.
+Le bundle final aura pour objectif de réunir une sélection d'applications couvrant la gestion d'un site web, la collaboration en ligne, les réunions virtuelles, la bureautique, la création de sites internet, la recherche en ligne, la gestion de projets, la traduction de texte, la synchronisation de fichiers, et la messagerie, tout en s'adaptant à la puissance de la machine, au temps disponible, et au public cible.
 
 Pour ce projet (workshop), nous avons réalisé dans un premier temps un périmètre pour comprendre au mieux les applications qui serait le plus important à retrouver dans ce bundle pour le développement de cette première version.
 
