@@ -74,17 +74,17 @@ Par ailleurs notre application s'appui sur une liste de technologies bien docume
 La structure de notre projet est organisée de manière à séparer clairement le frontend, développé en VueJS, du backend qui expose une API réalisée avec expressJs. 
 ![structure](/public/structure.jpg)
 
-À la racine du projet, le dossier src englobe les fichiers du frontend, incluant les répertoires assets pour les ressources statiques, components pour les composants réutilisables, et routeur pour la gestion des routes de l'application VueJS. 
+- À la racine du projet, le dossier src englobe les fichiers du frontend, incluant les répertoires assets pour les ressources statiques, components pour les composants réutilisables, et routeur pour la gestion des routes de l'application VueJS. 
 
-Le backend est représenté par le dossier backend, abritant le fichier app.js définissant les routes API, ainsi que le dossier data qui contient la logique liée à la manipulation des données de la base de données, avec des fichiers tels que `db.js` pour la configuration de la base de données et `dbOperations.js` pour les opérations sur les données. 
+- Le backend est représenté par le dossier backend, abritant le fichier app.js définissant les routes API, ainsi que le dossier data qui contient la logique liée à la manipulation des données de la base de données, avec des fichiers tels que `db.js` pour la configuration de la base de données et `dbOperations.js` pour les opérations sur les données. 
 
-Parmi les routes API, nous retrouvons des fonctionnalités essentielles telles que la récupération des listes de bundles et d'applications, l'obtention des applications liées à un bundle particulier, ainsi que la possibilité d'installer des applications spécifiques.
+- Parmi les routes API, nous retrouvons des fonctionnalités essentielles telles que la récupération des listes de bundles et d'applications, l'obtention des applications liées à un bundle particulier, ainsi que la possibilité d'installer des applications spécifiques.
 
-En ce qui concerne les routes de notre API, elles sont définies pour couvrir diverses fonctionnalités cruciales. Par exemple, la route `"GET /api/bundles"` permet de récupérer la liste des bundles, fournissant une vue complète des ensembles d'applications disponibles. 
+- En ce qui concerne les routes de notre API, elles sont définies pour couvrir diverses fonctionnalités cruciales. Par exemple, la route `"GET /api/bundles"` permet de récupérer la liste des bundles, fournissant une vue complète des ensembles d'applications disponibles. 
 
-De même, la route `"GET /api/applications"` offre la possibilité de récupérer la liste exhaustive des applications présentes dans notre système. Pour une perspective plus ciblée, la route `"GET /api/bundle/:bundleId/`applications" permet d'obtenir la liste d'applications spécifiques liées à un bundle particulier.
+- De même, la route `"GET /api/applications"` offre la possibilité de récupérer la liste exhaustive des applications présentes dans notre système. Pour une perspective plus ciblée, la route `"GET /api/bundle/:bundleId/`applications" permet d'obtenir la liste d'applications spécifiques liées à un bundle particulier.
 
-L'aspect opérationnel de notre API est renforcé par la route `"POST /api/install"`, qui, avec le corps de la requête spécifié sous la forme `{ appIds: [id1, id2…] }`, permet l'installation facilitée et personnalisée d'applications sélectionnées. 
+- L'aspect opérationnel de notre API est renforcé par la route `"POST /api/install"`, qui, avec le corps de la requête spécifié sous la forme `{ appIds: [id1, id2…] }`, permet l'installation facilitée et personnalisée d'applications sélectionnées. 
 
 
 
