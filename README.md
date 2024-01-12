@@ -10,7 +10,7 @@
 
 1. [Introduction](#introduction)
 2. [Objectifs](#objectifs)
-3. [Documentation technique](#documentation8technique)
+3. [Documentation technique](#documentationtechnique)
 4. [Installation](#installation)
 5. [Utilisation](#utilisation)
 6. [Contribuer](#contribuer)
@@ -118,10 +118,12 @@ API Endpoints
 - /api/install/apps: Installez plusieurs applications en spécifiant les IDs.
 
 Exemple d'Installation d'Applications via API
-    `curl -X POST http://localhost:3000/api/install/apps -H "Content-Type: application/json" -d '{"appIds": [1, 2, 3]}'`
+    ```bash
+    curl -X POST http://localhost:3000/api/install/apps -H "Content-Type: application/json" -d '{"appIds": [1, 2, 3]}'
 
 Exemple d'Obtention de Bundles via API
-    `curl http://localhost:3000/api/bundles`
+    ```bash
+    curl http://localhost:3000/api/bundles
 
 
 ## Contribuer
