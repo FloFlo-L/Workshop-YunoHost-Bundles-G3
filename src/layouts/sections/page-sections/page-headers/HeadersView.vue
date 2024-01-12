@@ -1,10 +1,4 @@
 <style>
-/* .template {
-  color: black;
-  background-color: black;
-  display: block;
-  margin-top: 100px;
-} */
 .wrapper {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
@@ -75,7 +69,10 @@ onMounted(() => {
 });
 </script>
 <template>
+  <!-- Composant DefaultNavbar pour la page -->
   <DefaultNavbar transparent />
+
+  <!-- Header component with a background image -->
   <Header>
     <div
       class="page-header min-height-200"
@@ -85,16 +82,17 @@ onMounted(() => {
       <span class="mask bg-gradient-dark opacity-8"></span>
     </div>
   </Header>
-
+  <!-- Zone principale du contenu avec une carte et le composant BaseLayout -->
   <div class="card card-body blur shadow-blur mx-3 mx-md-4 mt-n6 mb-4">
     <BaseLayout
       :breadcrumb="[{ label: 'Home', route: '/' }, { label: 'Page Headers' }]"
     >
+      <!-- Titre de la page -->
       <h2 style="text-align: center; padding: 20px" class="text-dark mb-0">
         Applications CHATONS
       </h2>
       <div class="row">
-        <!--Card -->
+        <!-- Carte pour Etherpad -->
         <div class="col-md-4 mt-md-0">
           <a href="/sections/page-sections/page-headers/author" class="">
             <div class="card move-on-hover min-height-160 shadow-lg mt-4">
@@ -107,12 +105,13 @@ onMounted(() => {
               <!--v-if-->
             </div>
           </a>
+          <!-- Box2 pour les détails d'Etherpad -->
           <div class="box2">
             <div class="mt-2 ms-1">
               <h6 class="mb-0">Etherpad</h6>
             </div>
           </div>
-
+          <!-- Box3 pour la case à cocher d'Etherpad -->
           <div class="box3">
             <input
               class="checkbox"
@@ -306,31 +305,68 @@ onMounted(() => {
 
 <script>
 import axios from "axios";
+
 export default {
   name: "app",
   data() {
     return {
       percentage: 0,
+      posts: [], // Ajout de la variable posts pour stocker les données récupérées
     };
   },
   methods: {
-    async check(name) {
-      var res = await axios.get(
-        "http://localhost:3000/api/bundle/:bundleId/applications"
-      );
+    async fetchData(bundleId) {
+      try {
+        // Requête GET pour récupérer des données
+        const res = await axios.get(
+          `http://localhost:3000/api/bundle/${bundleId}/applications`
+        );
+        console.log(res);
+        this.posts = res.data;
 
-      console.log(res);
-      this.posts = res.data;
+        // Mettez à jour la barre de progression en fonction du nombre d'applications installées
+        const installedAppsCount = this.posts.filter(
+          (app) => app.installed
+        ).length;
+        const totalAppsCount = this.posts.length;
+        this.percentage = (installedAppsCount / totalAppsCount) * 100;
+      } catch (error) {
+        console.error("Erreur lors de la requête GET:", error);
+      }
+    },
+
+    async installApps() {
+      try {
+        // Requête POST pour installer des applications
+        const res = await axios.post("http://localhost:3000/api/install/apps", {
+          appIds: [1, 2, 3],
+        });
+        console.log(res);
+
+        // Mettez à jour la barre de progression après l'installation des applications
+        await this.fetchData(1);
+      } catch (error) {
+        console.error("Erreur lors de la requête POST:", error);
+      }
+    },
+
+    async check(name) {
+      // Appel de la méthode fetchData avec un bundleId spécifique (ajoutez le bon bundleId)
+      await this.fetchData(1);
+
+      // Appel de la méthode installApps
+      await this.installApps();
 
       console.log(this.$refs[`checkbox${name}`].checked);
       console.log("name : " + name);
     },
   },
   created() {
+    // Modification de l'interval pour rendre la barre de progression plus lente
     let interval = setInterval(() => {
-      if (this.percentage < 100) this.percentage += 0.1;
+      if (this.percentage < 100) this.percentage += 0.01;
       else clearInterval(interval);
-    });
+    }, 100);
   },
   computed: {
     percent() {
@@ -339,4 +375,5 @@ export default {
   },
 };
 </script>
+
 message.txt 10 Ko

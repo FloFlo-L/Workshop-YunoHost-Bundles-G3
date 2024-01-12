@@ -56,6 +56,7 @@ defineProps({
             <h6 class="font-weight-bolder mb-4">{{ brand.name }}</h6>
           </div>
         </div>
+        <!-- Menus de navigation -->
         <div
           class="col-md-3 col-sm-6 col-6 mb-4"
           v-for="{ name, items } of menus"
