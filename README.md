@@ -10,7 +10,7 @@
 
 1. [Introduction](#introduction)
 2. [Objectifs](#objectifs)
-3. [Contribuer](#contribuer)
+3. [Documentation technique](#documentation8technique)
 4. [Licence](#licence)
 
 
@@ -25,7 +25,7 @@ Actuellement, le nombre d'applications disponibles dépasse 500, créant un déf
 ## Objectifs
 Durant ce workshop, l'objectif de ce projet est de concevoir une interface web permettant d'installer des "bundles" d'applications, des ensembles pré-configurés répondant à des utilisations spécifiques.
 
-# Choix du bundle
+### Choix du bundle
 Pour le développement de notre application, notre groupe a décidé de se focaliser sur le bundle “Monter un chaton”. Ce bundle vise à créer une infrastructure complète de services, combinant des outils de communication, de collaboration, et de bureautique pour répondre aux besoins variés des utilisateurs. 
 
 Le bundle final aura pour objectif de réunir une sélection d'applications couvrant la gestion d'un site web, la collaboration en ligne, les réunions virtuelles, la bureautique, la création de sites internet, la recherche en ligne, la gestion de projets, la traduction de texte, la synchronisation de fichiers, et la messagerie, tout en s'adaptant à la puissance de la machine, au temps disponible, et au public cible.
@@ -34,13 +34,42 @@ Pour ce projet (workshop), nous avons réalisé dans un premier temps un périm�
 
 Dans le bundle Chaton, nous avons inclus les applications suivantes :
 
-1. NextCloud: Une plateforme de collaboration en ligne qui offre des services de stockage, de partage et de synchronisation de fichiers, ainsi que des fonctionnalités de calendrier et de gestion des tâches.
+1. [NextCloud](https://nextcloud.com/): 
+Une plateforme de collaboration en ligne qui offre des services de stockage, de partage et de synchronisation de fichiers, ainsi que des fonctionnalités de calendrier et de gestion des tâches.
 
-2. Etherpad: Un éditeur de texte en temps réel permettant à plusieurs utilisateurs de collaborer simultanément sur un document, favorisant ainsi la collaboration en ligne.
+2. [Etherpad](https://etherpad.org/) : 
+Un éditeur de texte en temps réel permettant à plusieurs utilisateurs de collaborer simultanément sur un document, favorisant ainsi la collaboration en ligne.
 
-3. Jitsi Meet: Une solution de visioconférence open source permettant des réunions en ligne avec vidéo, audio et partage d'écran, offrant une alternative libre à d'autres services de vidéoconférence.
+3. [Jitsi Meet](https://meet.jit.si/): 
+Une solution de visioconférence open source permettant des réunions en ligne avec vidéo, audio et partage d'écran, offrant une alternative libre à d'autres services de vidéoconférence.
 
-4. RoundCube: Une interface web conviviale pour la gestion des emails, offrant un accès facile et pratique à la messagerie électronique directement depuis le navigateur.
+4. [RoundCube](https://roundcube.net/):
+Une interface web conviviale pour la gestion des emails, offrant un accès facile et pratique à la messagerie électronique directement depuis le navigateur.
+
+
+# Documentation technique 
+
+Avant de débuter la présentation technique de notre application, nous vous rappelons que vous pouvez retrouver notre repository sur le lien suivant:[github](https://github.com/FloFlo-L/Workshop-YunoHost-Bundles-G3.git)
+
+## Choix technologique 
+Nous avons opté pour les technologies suivantes pour notre application en raison de leur légèreté et de leur frugalité, répondant ainsi à l'objectif de choisir des solutions efficaces pour le développement de l'interface web :
+
+### Frontend 
+[VueJS](###frontend): Framework JavaScript progressif, léger et performant, offrant une gestion efficace de l'interface utilisateur.
+[Css](###frontend): Langage de style léger pour la présentation visuelle.
+[Bootstrap](###frontend): Framework CSS facilitant le développement d'une interface responsive et esthétique.
+
+### Backend
+[NodeJS](###backend): Environnement d'exécution JavaScript côté serveur, connu pour sa rapidité et son efficacité.
+[ExpressJS](###backend): Framework web minimaliste pour construire des api
+[Childprocess](###backend): Module permettant d'exécuter des processus externes depuis Node JS (dans notre cas pour faire des requête ssh: installation d’applications, ajout de domaines)
+[SqLite](###backend): Système de gestion de base de données léger et autonome, adapté à des applications avec des besoins modestes en termes de stockage et de performance.
+
+Par ailleurs notre application s'appui sur une liste de technologies bien documenté, on peut retrouver les documentations sur les liens suivants: 
+[Documentation VueJs](https://vuejs.org/)
+[Documentation Express](https://expressjs.com/fr/)
+[Documentation SqLite](https://www.sqlite.org/index.html)
+
 
 
 
