@@ -1,151 +1,165 @@
-const dbOperations = require('./dbOperations');
+const dbOperations = require("./dbOperations");
 
 // Ajouter des applications
 const applicationsData = [
-    {
-        id: 1,
-        name: 'NextCloud',
-        description: 'Description de NextCloud',
-        logo: 'https://github.com/YunoHost/apps/blob/master/logos/nextcloud.png',
-    },
-    {
-        id: 2,
-        name: 'Etherpad',
-        description: 'Description d\'Etherpad',
-        logo: 'https://github.com/YunoHost/apps/blob/master/logos/etherpad.png',
-    },
-    {
-        id: 3,
-        name: 'Jitsi',
-        description: 'Description de Jitsi',
-        logo: 'https://github.com/YunoHost/apps/blob/master/logos/jitsi.png',
-    },
-    {
-        id: 4,
-        name: 'Roundcube',
-        description: 'Description de Roundcube',
-        logo: 'https://github.com/YunoHost/apps/blob/master/logos/roundcube.png',
-    },
+  {
+    id: 1,
+    name: "NextCloud",
+    description: "Description de NextCloud",
+    logo: "https://github.com/YunoHost/apps/blob/master/logos/nextcloud.png",
+  },
+  {
+    id: 2,
+    name: "Etherpad",
+    description: "Description d'Etherpad",
+    logo: "https://github.com/YunoHost/apps/blob/master/logos/etherpad.png",
+  },
+  {
+    id: 3,
+    name: "Jitsi",
+    description: "Description de Jitsi",
+    logo: "https://github.com/YunoHost/apps/blob/master/logos/jitsi.png",
+  },
+  {
+    id: 4,
+    name: "Roundcube",
+    description: "Description de Roundcube",
+    logo: "https://github.com/YunoHost/apps/blob/master/logos/roundcube.png",
+  },
 ];
 
-applicationsData.forEach(application => {
-    dbOperations.insertApplication(application.id, application.name, application.description, application.logo);
+applicationsData.forEach((application) => {
+  dbOperations.insertApplication(
+    application.id,
+    application.name,
+    application.description,
+    application.logo
+  );
 });
 
 // Ajouter des bundles
 const bundlesData = [
-    {
-        id: 1,
-        name: 'Bundle 1',
-        description: 'Description du Bundle 1',
-        applicationIds: [1, 2, 3, 4],
-    },
-    {
-        id: 2,
-        name: 'Bundle 2',
-        description: 'Description du Bundle 2',
-        applicationIds: [],
-    },
-    {
-        id: 3,
-        name: 'Bundle 3',
-        description: 'Description du Bundle 3',
-        applicationIds: [],
-    },
-    {
-        id: 4,
-        name: 'Bundle 4',
-        description: 'Description du Bundle 4',
-        applicationIds: [],
-    },
+  {
+    id: 1,
+    name: "Bundle 1",
+    description: "Description du Bundle 1",
+    applicationIds: [1, 2, 3, 4],
+  },
+  {
+    id: 2,
+    name: "Bundle 2",
+    description: "Description du Bundle 2",
+    applicationIds: [],
+  },
+  {
+    id: 3,
+    name: "Bundle 3",
+    description: "Description du Bundle 3",
+    applicationIds: [],
+  },
+  {
+    id: 4,
+    name: "Bundle 4",
+    description: "Description du Bundle 4",
+    applicationIds: [],
+  },
 ];
 
 // Ajouter des applications
 const confguartionsData = [
-    {
-        id: 1,
-        applicationId: 1,
-        name: "nextcloud",
-        configs: {
-            "domain": "dcm1tlg3.nohost.me",
-            "path": "/nextcloud",
-            "admin": "florian",
-            "is_public": true,
-            "user_home": false
-        }
+  {
+    id: 1,
+    applicationId: 1,
+    name: "nextcloud",
+    configs: {
+      domain: "dcm1tlg3.nohost.me",
+      path: "/nextcloud",
+      admin: "florian",
+      is_public: true,
+      user_home: false,
     },
-    {
-        id: 2,
-        applicationId: 4,
-        name: "roundcube",
-        configs: {
-            "domain": "dcm1tlg3.nohost.me",
-            "name": "roundcube",
-            "path": "/webmail",
-            "language": "fr_FR",
-            "with_carddav": "no"
-        }
+  },
+  {
+    id: 2,
+    applicationId: 4,
+    name: "roundcube",
+    configs: {
+      domain: "dcm1tlg3.nohost.me",
+      name: "roundcube",
+      path: "/webmail",
+      language: "fr_FR",
+      with_carddav: "no",
     },
-    {
-        id: 3,
-        applicationId: 2,
-        name: "etherpad",
-        configs: {
-            "domain": "dcm1tlg3.nohost.me",
-            "path": "/etherpad",
-            "init_main_permission": "visitors",
-            "export": "none",
-            "language": "fr",
-            "admin": "florian",
-            "password": "1234Azer_"
-        }
+  },
+  {
+    id: 3,
+    applicationId: 2,
+    name: "etherpad",
+    configs: {
+      domain: "dcm1tlg3.nohost.me",
+      path: "/etherpad",
+      init_main_permission: "visitors",
+      export: "none",
+      language: "fr",
+      admin: "florian",
+      password: "1234Azer_",
     },
-    {
-        id: 4,
-        applicationId: 3,
-        name: "jitsi",
-        newdomain: true,
-        configs: {
-            "domain": "jitsi.dcm1tlg3.nohost.me"
-        }
-    }
-]
-confguartionsData.forEach(confguartion => {
-    dbOperations.insertAppConfiguration(confguartion.id, confguartion.applicationId, confguartion.name, confguartion.newdomain, confguartion.configs);
+  },
+  {
+    id: 4,
+    applicationId: 3,
+    name: "jitsi",
+    newdomain: true,
+    configs: {
+      domain: "jitsi.dcm1tlg3.nohost.me",
+    },
+  },
+];
+confguartionsData.forEach((confguartion) => {
+  dbOperations.insertAppConfiguration(
+    confguartion.id,
+    confguartion.applicationId,
+    confguartion.name,
+    confguartion.newdomain,
+    confguartion.configs
+  );
 });
 
-bundlesData.forEach(bundle => {
-    dbOperations.insertBundle(bundle.id, bundle.name, bundle.description, bundle.applicationIds);
+bundlesData.forEach((bundle) => {
+  dbOperations.insertBundle(bundle.id, bundle.name, bundle.description);
 
-    // Si le bundle a des applications, les lier au bundle
-    if (bundle.applicationIds.length > 0) {
-        dbOperations.insertBundleApplications(bundle.id, bundle.applicationIds);
-    }
+  // Si le bundle a des applications, les lier au bundle
+  if (bundle.applicationIds.length > 0) {
+    dbOperations.insertBundleApplications(bundle.id, bundle.applicationIds);
+  }
 });
 
 // Récupérer et afficher tous les bundles
 dbOperations.getAllBundles((err, bundles) => {
-    if (err) {
-        console.error('Erreur lors de la récupération des bundles :', err);
-    } else {
-        console.log('Bundles récupérés avec succès :', bundles);
-    }
+  if (err) {
+    console.error("Erreur lors de la récupération des bundles :", err);
+  } else {
+    console.log("Bundles récupérés avec succès :", bundles);
+  }
 });
 
 // Récupérer et afficher toutes les applications
 dbOperations.getAllApplications((err, applications) => {
-    if (err) {
-        console.error('Erreur lors de la récupération des applications :', err);
-    } else {
-        console.log('Applications récupérées avec succès :', applications);
-    }
+  if (err) {
+    console.error("Erreur lors de la récupération des applications :", err);
+  } else {
+    console.log("Applications récupérées avec succès :", applications);
+  }
 });
 
 // Récupérer et afficher toutes les configurations
 dbOperations.getAppConfigurations((err, app_configurations) => {
-    if (err) {
-        console.error('Erreur lors de la récupération des app_configurations :', err);
-    } else {
-        console.log('Applications récupérées avec succès :', app_configurations);
-    }
+  if (err) {
+    console.error(
+      "Erreur lors de la récupération des app_configurations :",
+      err
+    );
+  } else {
+    console.log("Applications récupérées avec succès :", app_configurations);
+  }
 });

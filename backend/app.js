@@ -1,29 +1,43 @@
-const express = require('express');
-const { exec } = require('child_process');
+const express = require("express");
+const { exec } = require("child_process");
 const app = express();
 const port = 3000;
-const dbOperations = require('./data/dbOperations');
-const { config } = require('process');
+const dbOperations = require("./data/dbOperations");
+const { config } = require("process");
+var cors = require("cors");
 
 // Middleware pour gérer les requêtes JSON
 app.use(express.json());
 
+// Middleware pour gérer les requêtes cross origin
+app.use(cors());
+
 // Endpoint pour obtenir tous les bundles
-app.get('/api/bundels', (req, res) => {
+app.get("/api/bundels", (req, res) => {
   dbOperations.getAllBundles((err, bundles) => {
     if (err) {
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: "Internal Server Error" });
     } else {
       res.json(bundles);
     }
   });
 });
 
+// Endpoint pour obtenir tous les bundles
+app.get("/api/daybay", (req, res) => {
+  const posts = [
+    { id: 1, message: "Premier post" },
+    { id: 2, message: "Deuxième post" },
+    { id: 3, message: "Troisième post" },
+  ];
+  res.json(posts);
+});
+
 // Endpoint pour obtenir toutes les applications
-app.get('/api/applications', (req, res) => {
+app.get("/api/applications", (req, res) => {
   dbOperations.getAllApplications((err, applications) => {
     if (err) {
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: "Internal Server Error" });
     } else {
       res.json(applications);
     }
@@ -31,35 +45,31 @@ app.get('/api/applications', (req, res) => {
 });
 
 // Endpoint pour obtenir un bundle
-app.get('/api/:bundle', (req, res) => {
+app.get("/api/:bundle", (req, res) => {
   // Utilisez req.params.bundle pour obtenir la valeur du paramètre :bundle
   const bundleId = req.params.bundle;
 
   dbOperations.getBundleById(bundleId, (err, bundle) => {
     if (err) {
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: "Internal Server Error" });
     } else {
       res.json(bundle);
     }
   });
 });
 
-
-
 // Endpoint pour obtenir les applications liées à un bundle
-app.get('/api/bundle/:bundleId/applications', (req, res) => {
+app.get("/api/bundle/:bundleId/applications", (req, res) => {
   const bundleId = req.params.bundleId;
 
   dbOperations.getApplicationsForBundle(bundleId, (err, applications) => {
     if (err) {
-      res.status(500).json({ error: 'Internal Server Error' });
+      res.status(500).json({ error: "Internal Server Error" });
     } else {
       res.json({ bundleId, applications });
     }
   });
 });
-
-
 
 // Fonction pour installer des applications à partir d'une liste d'IDs
 const installAppsByIds = async (appIds, res) => {
@@ -99,37 +109,35 @@ const installAppsByIds = async (appIds, res) => {
       // Mapper chaque paire clé-valeur pour créer la chaîne de requête
       const options = keyValuePairs
         .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
-        .join('&'); // Afficher la chaîne de requête
+        .join("&"); // Afficher la chaîne de requête
 
-
-
-      // connexion + exec de la ligne de commande 
-      const Client = require('ssh2').Client;
+      // connexion + exec de la ligne de commande
+      const Client = require("ssh2").Client;
       const conn = new Client({ readyTimeout: 60000 });
 
       // Informations de connexion SSH
       const sshConfig = {
-        host: '163.172.136.65',
-        username: 'florian',
-        password: 'Flo1234Azer_',
+        host: "163.172.136.65",
+        username: "florian",
+        password: "Flo1234Azer_",
       };
 
-      conn.on('ready', () => {
+      conn.on("ready", () => {
         // Vérifier si l'application a la propriété newdomain à true dans sa configuration
 
         if (configurations[0].newdomain !== undefined) {
-          console.log("entrééééé")
+          console.log("entrééééé");
           conn.exec(
             `echo ${sshConfig.password} | sudo -S yunohost domain add ${configObj.domain}`,
             (err, stream) => {
               stream
-                .on('close', (code, signal) => {
+                .on("close", (code, signal) => {
                   console.log(`SSH command exited with code ${code}`);
                 })
-                .on('data', (data) => {
+                .on("data", (data) => {
                   console.log(`Command output: ${data}`);
                 })
-                .stderr.on('data', (data) => {
+                .stderr.on("data", (data) => {
                   const errorMessage = `Error adding domain: "${data}"`;
                   console.error(errorMessage);
                   installErrors.push(errorMessage);
@@ -142,10 +150,9 @@ const installAppsByIds = async (appIds, res) => {
           `echo ${sshConfig.password} | sudo -S yunohost app install ${configurations[0].name} --args='${options}'`,
           (err, stream) => {
             stream
-              .on('close', (code, signal) => {
+              .on("close", (code, signal) => {
                 console.log(`SSH command exited with code ${code}`);
                 conn.end();
-
 
                 // Mettre à jour le nombre d'applications parcouru
                 appCount++;
@@ -161,21 +168,29 @@ const installAppsByIds = async (appIds, res) => {
 
                 // Envoyer un message sur l'état d'installation et la progression
                 const progress = (installedCount / totalApps) * 100;
-                res.write(`Application ${installedCount}/${totalApps} installed. Progress: ${progress.toFixed(2)}%\n`);
+                res.write(
+                  `Application ${installedCount}/${totalApps} installed. Progress: ${progress.toFixed(
+                    2
+                  )}%\n`
+                );
 
                 // Si toutes les applications ont été installées, envoyer un message de succès
                 if (appCount === totalApps) {
                   if (installErrors.length === 0) {
-                    res.end('All applications installed successfully');
+                    res.end("All applications installed successfully");
                   } else {
-                    res.end(`${totalApps}-${installedCount} applications failed to install:\n${installErrors.join('\n')}`);
+                    res.end(
+                      `${totalApps}-${installedCount} applications failed to install:\n${installErrors.join(
+                        "\n"
+                      )}`
+                    );
                   }
                 }
               })
-              .on('data', (data) => {
+              .on("data", (data) => {
                 console.log(`Command output: ${data}`);
               })
-              .stderr.on('data', (data) => {
+              .stderr.on("data", (data) => {
                 const errorMessage = `Error installing ${configurations[0].name}: "${data}"`;
                 console.error(errorMessage);
                 installErrors.push(errorMessage);
@@ -188,21 +203,21 @@ const installAppsByIds = async (appIds, res) => {
   } catch (error) {
     console.error(`Error installing apps: ${error.message}`);
     res.status(500).json({
-      error: 'Failed to install applications',
+      error: "Failed to install applications",
       details: error.message,
     });
   }
 };
 
 // API pour installer plusieurs applications par IDs avec configurations
-app.post('/api/install/apps', async (req, res) => {
+app.post("/api/install/apps", async (req, res) => {
   const { appIds } = req.body;
   if (!appIds || !Array.isArray(appIds) || appIds.length === 0) {
-    return res.status(400).json({ error: 'Invalid or empty app IDs provided' });
+    return res.status(400).json({ error: "Invalid or empty app IDs provided" });
   }
 
   // Initialiser la réponse avec une progresse bar
-  res.write('Installation Progress:\n');
+  res.write("Installation Progress:\n");
 
   await installAppsByIds(appIds, res);
 });
