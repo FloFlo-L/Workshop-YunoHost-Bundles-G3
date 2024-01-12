@@ -1,7 +1,7 @@
 const express = require("express");
 const { exec } = require("child_process");
 const app = express();
-const port = 3000;
+const port = 3001;
 const dbOperations = require("./data/dbOperations");
 const { config } = require("process");
 var cors = require("cors");
