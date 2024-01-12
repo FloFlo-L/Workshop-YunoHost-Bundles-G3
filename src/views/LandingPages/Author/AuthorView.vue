@@ -1,11 +1,12 @@
 <script setup>
 // example components
-import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
+//import DefaultNavbar from "../../../examples/navbars/NavbarDefault.vue";
 import Header from "../../../examples/Header.vue";
 
 // sections
 import Footer from "./Sections/AuthorFooter.vue";
-import Profile from "./Sections/AuthorProfile.vue";
+import Profile from "./Sections/EtherpadDatail.vue";
+//import Profile from "./Sections/NextCloudDetail.vue";
 import Posts from "./Sections/AuthorPosts.vue";
 import Contact from "./Sections/AuthorContact.vue";
 

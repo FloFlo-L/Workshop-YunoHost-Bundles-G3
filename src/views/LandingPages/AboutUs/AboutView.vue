@@ -20,7 +20,7 @@ import Newsletter from "./Sections/AboutNewsletter.vue";
 const body = document.getElementsByTagName("body")[0];
 //hooks
 onMounted(() => {
-  body.classList.add("about-us");
+  body.classList.add("propos");
   body.classList.add("bg-gray-200");
 
   if (document.getElementById("typed")) {

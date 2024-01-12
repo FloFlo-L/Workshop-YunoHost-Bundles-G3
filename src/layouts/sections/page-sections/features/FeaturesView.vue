@@ -1,4 +1,4 @@
-<script setup>
+<!-- <script setup>
 import { onMounted } from "vue";
 
 // Sections components
@@ -23,12 +23,12 @@ onMounted(() => {
   <BaseLayout
     title="Features"
     :breadcrumb="[
-      { label: 'Page Sections', route: '/sections/page-sections/page-headers' },
-      { label: 'Features' },
+      { label: 'Home', route: '/' },
+      { label: 'Fiche Technique' },
     ]"
   >
     <View title="Features 1" :code="feature1Code" id="feature-1">
       <FeatureOne />
     </View>
   </BaseLayout>
-</template>
+</template> -->
